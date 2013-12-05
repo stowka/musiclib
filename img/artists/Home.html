@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///Users/antoine/Sites/home/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="./Home_files/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="./Home_files/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="./Home_files/main.css">
+		<link rel="icon" type="image/png" href="file:///Users/antoine/Sites/home/img/home-icon.png">
+		<meta author="Antoine De Gieter">
+	</head>
+
+	<body style="">
+		<div class="container">
+			
+			<div class="box">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="main-title">Home — Search</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<form action="http://www.google.com/search" method="get">
+							<div class="input-group">
+								<input type="search" class="form-control" name="q" placeholder="Google" autocomplete="off" required="" autofocus="">
+								<span class="input-group-btn">
+									<button class="btn btn-info" type="submit">Go!</button>
+								</span>
+							</div>
+							<input type="hidden" name="safe" value="active">
+						</form>
+					</div>
+
+					<div class="col-md-1"></div>
+
+					<div class="col-md-3">
+						<p>
+							Google
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<form action="http://www.youtube.com/results" method="get">
+							<div class="input-group">
+								<input type="search" class="form-control" name="search_query" placeholder="YouTube" autocomplete="off" required="">
+								<span class="input-group-btn">
+									<button class="btn btn-danger" type="submit">Go!</button>
+								</span>
+							</div>
+						</form>
+					</div>
+
+					<div class="col-md-1"></div>
+
+					<div class="col-md-3">
+						<p>
+							YouTube
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<form action="http://www.series-ddl.com/" method="get">
+							<div class="input-group">
+								<input type="search" class="form-control" name="s" placeholder="Serie-DDL" autocomplete="off" data-provide="typeahead" id="serieddl" required="">
+								<span class="input-group-btn">
+									<button class="btn btn-success" type="submit">Go!</button>
+								</span>
+							</div>
+						</form>
+					</div>
+
+					<div class="col-md-1"></div>
+
+					<div class="col-md-3">
+						<p>
+							Téléchargement de séries
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<form action="http://www.seriebox.com/search.php" method="get">
+							<div class="input-group">
+								<input type="search" class="form-control" name="txt" placeholder="Seriebox" autocomplete="off" data-provide="typeahead" id="seriebox" required="">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="submit">Go!</button>
+								</span>
+							</div>
+							<input type="hidden" name="submit" value="OK">
+						</form>
+					</div>
+
+					<div class="col-md-1"></div>
+
+					<div class="col-md-3">
+						<p>
+							Gestion des séries / films
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<div class="input-group">
+							<input type="search" class="form-control" id="tpb" placeholder="The Pirate Bay" autocomplete="off" data-provide="typeahead" onkeydown="javascript:if(event.keyCode===13) window.location=&#39;http://thepiratebay.sx/search/&#39;+document.getElementById(&#39;tpb&#39;).value+&#39;/0/99/0&#39;;">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit" onclick="javascript:window.location=&#39;http://thepiratebay.sx/search/&#39;+document.getElementById(&#39;tpb&#39;).value+&#39;/0/99/0&#39;;">Go!</button>
+							</span>
+						</div>
+					</div>
+
+					<div class="col-md-1"></div>
+
+					<div class="col-md-3">
+						<p>
+							Téléchargement en P2P
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<form action="http://fr.openclassrooms.com/recherche/" method="get">
+							<div class="input-group">
+								<input type="search" class="form-control" name="search" autocomplete="off" placeholder="OpenClassrooms" data-provide="typeahead" id="openclassrooms" required="">
+								<span class="input-group-btn">
+									<button class="btn btn-warning" type="submit">Go!</button>
+								</span>
+							</div>
+						</form>
+					</div>
+
+					<div class="col-md-1"></div>
+
+					<div class="col-md-3">
+						<p>
+							OpenClassrooms
+						</p>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-6">
+						<h3 class="main-title">
+							Mail Zimbra
+						</h3>
+						<form id="fm1" class="fm-v clearfix" action="https://cas.univ-fcomte.fr/cas/login;jsessionid=52C3F98C22EEA458A0518F0B4CDA9061.cas1?service=https%3A%2F%2Fmail.univ-fcomte.fr%3A443%2Fpublic%2Fpreauth_edu.jsp" method="post">
+							<input type="text" id="username" name="username" class="form-control" autocomplete="false" placeholder="NetID" required="">
+							<br>
+							<div class="input-group">
+								<input id="password" name="password" class="form-control" type="password" placeholder="Password" required="">
+								<span class="input-group-btn">
+									<input class="btn btn-inverse" name="submit" value="Se connecter" type="submit">
+								</span>
+							</div>
+							
+							<input type="hidden" name="lt" value="4727F127C569784C1865D46FE239791DFA80CAC52B87A7967FA4E979B331DA1B6951137CD4F8F994F8617CD1667E61E6">
+							<input type="hidden" name="_eventId" value="submit">
+						</form>
+					</div>
+
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="main-title">
+									Useful links
+								</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<a href="http://cours-info.iut-bm.univ-fcomte.fr/index.php?option=com_content&view=section&id=8&Itemid=25" class="btn btn-primary form-control">Cours-info</a>
+							</div>
+
+							<div class="col-md-4">
+								<a href="http://dut.proced90.com/matieres/dut/" class="btn btn-danger form-control">Proced90</a>
+							</div>
+
+							<div class="col-md-4">
+								<a href="http://www.koreus.com/videos/nouveau/" class="btn btn-warning form-control">Koreus</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="./Home_files/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="./Home_files/bootstrap.js"></script>
+		<script type="text/javascript" src="./Home_files/typeahead.js"></script>
+		<script type="text/javascript">
+			var series = [
+				"Game of Thrones",
+				"Breaking Bad",
+				"The Big Bang Theory",
+				"How I Met Your Mother",
+				"Supernatural",
+				"Grimm",
+				"House M.D.",
+				"Fringe",
+				"Lost",
+				"Hero Corp",
+				"Platane",
+				"Malcolm in the Middle",
+				"Arrow",
+				"Psych",
+				"Suits",
+				"White Collar",
+				"Graceland",
+				"Under The Dome",
+				"Covert Affairs",
+				"Royal Pains",
+				"Marvel's Agents of S.H.I.E.L.D.",
+				"The Blacklist",
+				"The Walking Dead",
+				"American Horror Story",
+				"Burn Notice",
+				"Falling Skies",
+				"Monk",
+				"Desperate Housewives",
+				"Grey's Anatomy",
+				"Prison Break",
+				"Saving Hope",
+				"The Listener",
+				"The Mentalist",
+				"The Office (US)",
+				"Chuck",
+				"Smallville",
+				"That '70s Show",
+				"Dr. Horrible's Sing-Along Blog",
+				"Alphas",
+				"One Tree Hill",
+			];
+			var openclassrooms = [
+				"HTML 5",
+				"CSS 3",
+				"PHP",
+				"MySQL",
+				"SQL",
+				"Python",
+				"Perl",
+				"Java",
+				"C",
+				"C++",
+				"Android",
+				"iOS",
+			];
+			
+			$('#serieddl').typeahead( {
+				source: series,
+			});
+
+			$('#seriebox').typeahead( {
+				source: series,
+			});
+			
+			$('#tpb').typeahead( {
+				source: series,
+			});
+
+
+			$('#openclassrooms').typeahead( {
+				source: openclassrooms,
+			});
+		</script>
+	
+</body></html>

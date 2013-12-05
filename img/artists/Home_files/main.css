@@ -1,0 +1,37 @@
+@font-face{ 
+	font-family: 'default';
+	src: url('../fonts/default.ttf') format('truetype');
+}
+
+body {
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'default';
+	letter-spacing: 2px;
+	font-weight: bolder;
+}
+
+.box {
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 32px;
+	margin: auto;
+	box-shadow: 0 0 3px #000;
+	color: #fff;
+	border-left: solid 20px rgba(0, 0, 0, 0.5);
+	border-right: solid 20px rgba(0, 0, 0, 0.5);
+	border-bottom: solid 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 3px #000;
+}
+
+.main-title {
+	font-family: 'default';
+}
+
+.modal-content {
+	border: solid 10px rgba(0, 0, 0, 0.4);
+}
+
+input, button, a {
+	font-family: "Helvetica Neue", "Helvetica", sans-serif;
+}

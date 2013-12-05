@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Date</key><date>2013-11-25T10:51:59Z</date>
+	<key>Application Version</key><string>11.1.3</string>
+	<key>Features</key><integer>5</integer>
+	<key>Show Content Ratings</key><true/>
+	<key>Music Folder</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/</string>
+	<key>Library Persistent ID</key><string>A97815997DAD3CA7</string>
+	<key>Tracks</key>
+	<dict>
+		<key>2806</key>
+		<dict>
+			<key>Track ID</key><integer>2806</integer>
+			<key>Name</key><string>Perform This Way</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5469824</integer>
+			<key>Total Time</key><integer>174889</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:44Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>250</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>46</integer>
+			<key>Play Date</key><integer>3443855861</integer>
+			<key>Play Date UTC</key><date>2013-02-16T09:37:41Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2012-02-09T17:06:16Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>980062C70A1D77BC</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/01%20Perform%20This%20Way.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2808</key>
+		<dict>
+			<key>Track ID</key><integer>2808</integer>
+			<key>Name</key><string>CNR</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6783105</integer>
+			<key>Total Time</key><integer>201743</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:44Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>268</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>10</integer>
+			<key>Play Date</key><integer>3421448130</integer>
+			<key>Play Date UTC</key><date>2012-06-02T01:15:30Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>72E252B1204762DD</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/02%20CNR.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2810</key>
+		<dict>
+			<key>Track ID</key><integer>2810</integer>
+			<key>Name</key><string>TMZ</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6934003</integer>
+			<key>Total Time</key><integer>220081</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:44Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>251</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3414914764</integer>
+			<key>Play Date UTC</key><date>2012-03-18T10:26:04Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>197C08B160CAFBCA</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/03%20TMZ.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2812</key>
+		<dict>
+			<key>Track ID</key><integer>2812</integer>
+			<key>Name</key><string>Skipper Dan</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>7703730</integer>
+			<key>Total Time</key><integer>241475</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:44Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>255</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3426073953</integer>
+			<key>Play Date UTC</key><date>2012-07-25T14:12:33Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>E64EDDB01A4069D8</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/04%20Skipper%20Dan.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2814</key>
+		<dict>
+			<key>Track ID</key><integer>2814</integer>
+			<key>Name</key><string>Polka Face</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>9271750</integer>
+			<key>Total Time</key><integer>287085</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:44Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>258</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>31</integer>
+			<key>Play Date</key><integer>3451417159</integer>
+			<key>Play Date UTC</key><date>2013-05-14T21:59:19Z</date>
+			<key>Skip Count</key><integer>4</integer>
+			<key>Skip Date</key><date>2013-09-11T17:48:34Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>68B095268E03A13B</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/05%20Polka%20Face.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2816</key>
+		<dict>
+			<key>Track ID</key><integer>2816</integer>
+			<key>Name</key><string>Craigslist</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>9592116</integer>
+			<key>Total Time</key><integer>293146</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:46Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>261</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3442221096</integer>
+			<key>Play Date UTC</key><date>2013-01-28T11:31:36Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>00CFB62070E3FD8F</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/06%20Craigslist.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2818</key>
+		<dict>
+			<key>Track ID</key><integer>2818</integer>
+			<key>Name</key><string>Party In The CIA</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5732814</integer>
+			<key>Total Time</key><integer>176744</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:46Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>259</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>9</integer>
+			<key>Play Date</key><integer>3427992630</integer>
+			<key>Play Date UTC</key><date>2012-08-16T19:10:30Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>009441B3E5953FA6</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/07%20Party%20In%20The%20CIA.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2820</key>
+		<dict>
+			<key>Track ID</key><integer>2820</integer>
+			<key>Name</key><string>Ringtone</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6570509</integer>
+			<key>Total Time</key><integer>204669</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:46Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>9</integer>
+			<key>Play Date</key><integer>3417569864</integer>
+			<key>Play Date UTC</key><date>2012-04-18T03:57:44Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>267CB5D4E8897D78</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/08%20Ringtone.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2822</key>
+		<dict>
+			<key>Track ID</key><integer>2822</integer>
+			<key>Name</key><string>Another Tattoo</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5175495</integer>
+			<key>Total Time</key><integer>169769</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:46Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>243</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>22</integer>
+			<key>Play Date</key><integer>3421269836</integer>
+			<key>Play Date UTC</key><date>2012-05-30T23:43:56Z</date>
+			<key>Skip Count</key><integer>6</integer>
+			<key>Skip Date</key><date>2012-01-17T19:05:36Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>499FD79CA2D54865</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/09%20Another%20Tattoo.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2824</key>
+		<dict>
+			<key>Track ID</key><integer>2824</integer>
+			<key>Name</key><string>If That Isn't Love</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>7902723</integer>
+			<key>Total Time</key><integer>228466</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:46Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>276</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>32</integer>
+			<key>Play Date</key><integer>3456431079</integer>
+			<key>Play Date UTC</key><date>2013-07-11T22:44:39Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2011-12-02T18:53:29Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>BA733C80ACE7A985</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/10%20If%20That%20Isn't%20Love.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2826</key>
+		<dict>
+			<key>Track ID</key><integer>2826</integer>
+			<key>Name</key><string>Whatever You Like</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>7806086</integer>
+			<key>Total Time</key><integer>221753</integer>
+			<key>Track Number</key><integer>11</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:46Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>281</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>12</integer>
+			<key>Play Date</key><integer>3421270300</integer>
+			<key>Play Date UTC</key><date>2012-05-30T23:51:40Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>E85D594F82DB2076</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/11%20Whatever%20You%20Like.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2828</key>
+		<dict>
+			<key>Track ID</key><integer>2828</integer>
+			<key>Name</key><string>Stop Forwarding That Crap To Me</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album</key><string>Alpocalypse</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>10976742</integer>
+			<key>Total Time</key><integer>342648</integer>
+			<key>Track Number</key><integer>12</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-08-21T14:33:46Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:16Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>57</integer>
+			<key>Play Date</key><integer>3439917874</integer>
+			<key>Play Date UTC</key><date>2013-01-01T19:44:34Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2011-12-08T15:24:56Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Persistent ID</key><string>B496D2F98014192B</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Alpocalypse/12%20Stop%20Forwarding%20That%20Crap%20To%20Me.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2830</key>
+		<dict>
+			<key>Track ID</key><integer>2830</integer>
+			<key>Name</key><string>The Saga Begins (Lyrical Adaption of "American Pie")</string>
+			<key>Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Album Artist</key><string>"Weird Al" Yankovic</string>
+			<key>Composer</key><string>Don McLean</string>
+			<key>Album</key><string>Running With Scissors</string>
+			<key>Genre</key><string>Comedy</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>11578074</integer>
+			<key>Total Time</key><integer>328200</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>1999</integer>
+			<key>Date Modified</key><date>2011-07-09T21:01:52Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:17Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>47</integer>
+			<key>Play Date</key><integer>3452365882</integer>
+			<key>Play Date UTC</key><date>2013-05-25T21:31:22Z</date>
+			<key>Skip Count</key><integer>7</integer>
+			<key>Skip Date</key><date>2012-01-23T14:18:40Z</date>
+			<key>Release Date</key><date>1999-06-29T07:00:00Z</date>
+			<key>Rating</key><integer>100</integer>
+			<key>Album Rating</key><integer>100</integer>
+			<key>Album Rating Computed</key><true/>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Sort Name</key><string>Saga Begins (Lyrical Adaption of "American Pie")</string>
+			<key>Persistent ID</key><string>C45BEBA9FCC928EF</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/_Weird%20Al_%20Yankovic/Running%20With%20Scissors/01%20The%20Saga%20Begins%20(Lyrical%20Adaption%20of%20_American%20Pie_).m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2832</key>
+		<dict>
+			<key>Track ID</key><integer>2832</integer>
+			<key>Name</key><string>Je suis de retour</string>
+			<key>Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Album Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Dernière chance de se faire du fric</string>
+			<key>Genre</key><string>Variété française</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>6495322</integer>
+			<key>Total Time</key><integer>181395</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2010</integer>
+			<key>Date Modified</key><date>2012-03-11T09:00:48Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:29Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>5</integer>
+			<key>Play Date</key><integer>3449687990</integer>
+			<key>Play Date UTC</key><date>2013-04-24T21:39:50Z</date>
+			<key>Release Date</key><date>2010-02-14T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>B886788F96E81EFB</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf%20&#38;%20Monsieur%20D/Dernie%CC%80re%20chance%20de%20se%20faire%20du%20fric/01%20Je%20suis%20de%20retour.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2834</key>
+		<dict>
+			<key>Track ID</key><integer>2834</integer>
+			<key>Name</key><string>Club des cools</string>
+			<key>Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Album Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Dernière chance de se faire du fric</string>
+			<key>Genre</key><string>Variété française</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>6975408</integer>
+			<key>Total Time</key><integer>191012</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2010</integer>
+			<key>Date Modified</key><date>2012-03-11T09:00:48Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:30Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3467889617</integer>
+			<key>Play Date UTC</key><date>2013-11-21T13:40:17Z</date>
+			<key>Release Date</key><date>2010-02-14T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>62CD032EF79BEBF2</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf%20&#38;%20Monsieur%20D/Dernie%CC%80re%20chance%20de%20se%20faire%20du%20fric/02%20Club%20des%20cools.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2836</key>
+		<dict>
+			<key>Track ID</key><integer>2836</integer>
+			<key>Name</key><string>3 minutes</string>
+			<key>Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Album Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Dernière chance de se faire du fric</string>
+			<key>Genre</key><string>Variété française</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>2561517</integer>
+			<key>Total Time</key><integer>61633</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2010</integer>
+			<key>Date Modified</key><date>2012-03-11T09:00:48Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:30Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>11</integer>
+			<key>Play Date</key><integer>3454415414</integer>
+			<key>Play Date UTC</key><date>2013-06-18T14:50:14Z</date>
+			<key>Release Date</key><date>2010-02-14T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>24DE0879CB745DF9</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf%20&#38;%20Monsieur%20D/Dernie%CC%80re%20chance%20de%20se%20faire%20du%20fric/03%203%20minutes.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2838</key>
+		<dict>
+			<key>Track ID</key><integer>2838</integer>
+			<key>Name</key><string>Punk à chien</string>
+			<key>Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Album Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Dernière chance de se faire du fric</string>
+			<key>Genre</key><string>Variété française</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>5760762</integer>
+			<key>Total Time</key><integer>157006</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2010</integer>
+			<key>Date Modified</key><date>2012-03-11T09:00:48Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:30Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3465486826</integer>
+			<key>Play Date UTC</key><date>2013-10-24T18:13:46Z</date>
+			<key>Release Date</key><date>2010-02-14T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>F3CE76A89574F997</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf%20&#38;%20Monsieur%20D/Dernie%CC%80re%20chance%20de%20se%20faire%20du%20fric/04%20Punk%20a%CC%80%20chien.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2840</key>
+		<dict>
+			<key>Track ID</key><integer>2840</integer>
+			<key>Name</key><string>Un monde plus beau</string>
+			<key>Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Album Artist</key><string>Oldelaf &#38; Monsieur D</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Dernière chance de se faire du fric</string>
+			<key>Genre</key><string>Variété française</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>8404477</integer>
+			<key>Total Time</key><integer>238950</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2010</integer>
+			<key>Date Modified</key><date>2012-03-11T09:00:48Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:30Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>9</integer>
+			<key>Play Date</key><integer>3465069767</integer>
+			<key>Play Date UTC</key><date>2013-10-19T22:22:47Z</date>
+			<key>Release Date</key><date>2010-02-14T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>192785CB3D405E3E</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf%20&#38;%20Monsieur%20D/Dernie%CC%80re%20chance%20de%20se%20faire%20du%20fric/05%20Un%20monde%20plus%20beau.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2842</key>
+		<dict>
+			<key>Track ID</key><integer>2842</integer>
+			<key>Name</key><string>Le monde est beau</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Vendredi - EP</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>5933410</integer>
+			<key>Total Time</key><integer>162032</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>5</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-02-21T21:10:36Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:31Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3433772941</integer>
+			<key>Play Date UTC</key><date>2012-10-22T16:49:01Z</date>
+			<key>Release Date</key><date>2011-02-21T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>21C943E18280C993</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Vendredi%20-%20EP/01%20Le%20monde%20est%20beau.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2844</key>
+		<dict>
+			<key>Track ID</key><integer>2844</integer>
+			<key>Name</key><string>Vendredi</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Vendredi - EP</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>7079052</integer>
+			<key>Total Time</key><integer>198944</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>5</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-02-21T21:10:40Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:31Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>3</integer>
+			<key>Play Date</key><integer>3404154929</integer>
+			<key>Play Date UTC</key><date>2011-11-14T21:35:29Z</date>
+			<key>Release Date</key><date>2011-02-21T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>BF4A35983CE47E08</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Vendredi%20-%20EP/02%20Vendredi.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2846</key>
+		<dict>
+			<key>Track ID</key><integer>2846</integer>
+			<key>Name</key><string>Comme je peux</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Vendredi - EP</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>7697515</integer>
+			<key>Total Time</key><integer>216193</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>5</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-02-21T21:10:42Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:32Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>23</integer>
+			<key>Play Date</key><integer>3454526785</integer>
+			<key>Play Date UTC</key><date>2013-06-19T21:46:25Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2012-01-23T14:08:55Z</date>
+			<key>Release Date</key><date>2011-02-21T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>7E7971B03EAC371D</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Vendredi%20-%20EP/03%20Comme%20je%20peux.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2848</key>
+		<dict>
+			<key>Track ID</key><integer>2848</integer>
+			<key>Name</key><string>Subjonctif</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Vendredi - EP</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>6986682</integer>
+			<key>Total Time</key><integer>182956</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>5</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-02-21T21:10:56Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:32Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>25</integer>
+			<key>Play Date</key><integer>3459101869</integer>
+			<key>Play Date UTC</key><date>2013-08-11T20:37:49Z</date>
+			<key>Skip Count</key><integer>4</integer>
+			<key>Skip Date</key><date>2012-01-05T12:23:27Z</date>
+			<key>Release Date</key><date>2011-02-21T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>0A3AE3707CDC5908</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Vendredi%20-%20EP/04%20Subjonctif.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2850</key>
+		<dict>
+			<key>Track ID</key><integer>2850</integer>
+			<key>Name</key><string>Sparadrap</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Vendredi - EP</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>6924401</integer>
+			<key>Total Time</key><integer>193417</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>5</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-02-21T21:11:00Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:32Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>3</integer>
+			<key>Play Date</key><integer>3459102400</integer>
+			<key>Play Date UTC</key><date>2013-08-11T20:46:40Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2012-01-18T12:10:21Z</date>
+			<key>Release Date</key><date>2011-02-21T08:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>84F98A1F567B91C2</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Vendredi%20-%20EP/05%20Sparadrap.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2852</key>
+		<dict>
+			<key>Track ID</key><integer>2852</integer>
+			<key>Name</key><string>Le monde est beau</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Le monde est beau</string>
+			<key>Genre</key><string>French Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>5943745</integer>
+			<key>Total Time</key><integer>164560</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-09-27T08:00:24Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:35Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>16</integer>
+			<key>Play Date</key><integer>3448534345</integer>
+			<key>Play Date UTC</key><date>2013-04-11T13:12:25Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2013-08-02T18:27:30Z</date>
+			<key>Release Date</key><date>2011-09-12T07:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>B67CDF6D5ECF78C0</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Le%20monde%20est%20beau/01%20Le%20monde%20est%20beau.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2854</key>
+		<dict>
+			<key>Track ID</key><integer>2854</integer>
+			<key>Name</key><string>Sparadrap</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Le monde est beau</string>
+			<key>Genre</key><string>French Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>6905173</integer>
+			<key>Total Time</key><integer>194680</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-09-27T08:00:24Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:36Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>31</integer>
+			<key>Play Date</key><integer>3459102211</integer>
+			<key>Play Date UTC</key><date>2013-08-11T20:43:31Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2012-01-18T14:43:12Z</date>
+			<key>Release Date</key><date>2011-09-12T07:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>BEEEFC91BF9718C4</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Le%20monde%20est%20beau/02%20Sparadrap.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2856</key>
+		<dict>
+			<key>Track ID</key><integer>2856</integer>
+			<key>Name</key><string>La tristitude</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Le monde est beau</string>
+			<key>Genre</key><string>French Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>10329801</integer>
+			<key>Total Time</key><integer>288950</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-09-27T08:00:28Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:36Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>27</integer>
+			<key>Play Date</key><integer>3458484812</integer>
+			<key>Play Date UTC</key><date>2013-08-04T17:13:32Z</date>
+			<key>Skip Count</key><integer>6</integer>
+			<key>Skip Date</key><date>2013-04-11T13:12:40Z</date>
+			<key>Release Date</key><date>2011-09-12T07:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>DA991C4C143B6E9F</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Le%20monde%20est%20beau/03%20La%20tristitude.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2858</key>
+		<dict>
+			<key>Track ID</key><integer>2858</integer>
+			<key>Name</key><string>Courseulles-sur-mer</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Le monde est beau</string>
+			<key>Genre</key><string>French Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>6337808</integer>
+			<key>Total Time</key><integer>175885</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-09-27T08:00:44Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:36Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>28</integer>
+			<key>Play Date</key><integer>3459101066</integer>
+			<key>Play Date UTC</key><date>2013-08-11T20:24:26Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2012-01-18T12:10:24Z</date>
+			<key>Release Date</key><date>2011-09-12T07:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>227A2386B0D0AFC6</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Le%20monde%20est%20beau/04%20Courseulles-sur-mer.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2860</key>
+		<dict>
+			<key>Track ID</key><integer>2860</integer>
+			<key>Name</key><string>Danse</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Le monde est beau</string>
+			<key>Genre</key><string>French Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>7340171</integer>
+			<key>Total Time</key><integer>199493</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-09-27T08:00:50Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:37Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>35</integer>
+			<key>Play Date</key><integer>3454526189</integer>
+			<key>Play Date UTC</key><date>2013-06-19T21:36:29Z</date>
+			<key>Skip Count</key><integer>4</integer>
+			<key>Skip Date</key><date>2012-01-24T16:13:34Z</date>
+			<key>Release Date</key><date>2011-09-12T07:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>5E19506672CDD369</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Le%20monde%20est%20beau/05%20Danse.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2862</key>
+		<dict>
+			<key>Track ID</key><integer>2862</integer>
+			<key>Name</key><string>Les filles qui s'appellent Valerie</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Le monde est beau</string>
+			<key>Genre</key><string>French Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>7577177</integer>
+			<key>Total Time</key><integer>212253</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-09-27T08:00:56Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:37Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>26</integer>
+			<key>Play Date</key><integer>3442751192</integer>
+			<key>Play Date UTC</key><date>2013-02-03T14:46:32Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2011-11-27T15:49:14Z</date>
+			<key>Release Date</key><date>2011-09-12T07:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>07C3CB5B40CCA644</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Le%20monde%20est%20beau/06%20Les%20filles%20qui%20s'appellent%20Valerie.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2864</key>
+		<dict>
+			<key>Track ID</key><integer>2864</integer>
+			<key>Name</key><string>Vendredi</string>
+			<key>Artist</key><string>Oldelaf</string>
+			<key>Album Artist</key><string>Oldelaf</string>
+			<key>Composer</key><string>Olivier Delafosse</string>
+			<key>Album</key><string>Le monde est beau</string>
+			<key>Genre</key><string>French Pop</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>7079425</integer>
+			<key>Total Time</key><integer>200693</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2011-09-27T08:01:06Z</date>
+			<key>Date Added</key><date>2011-10-24T20:01:37Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3459101506</integer>
+			<key>Play Date UTC</key><date>2013-08-11T20:31:46Z</date>
+			<key>Release Date</key><date>2011-09-12T07:00:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>E1B6F75CCBD4625F</string>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/Users/antoine/Music/iTunes/iTunes%20Media/Music/Oldelaf/Le%20monde%20est%20beau/07%20Vendredi.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>
