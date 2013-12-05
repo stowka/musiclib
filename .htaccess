@@ -1,0 +1,8 @@
+ErrorDocument 404 /404.php
+ErrorDocument 403 http://adegieter.com/403.php
+
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /Users/antoine/Sites/musiclib
+
+RewriteRule ^(([A-Za-z]])+)(\.html?)?$  ./$2.php [L]
