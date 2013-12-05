@@ -229,6 +229,9 @@
 			return $this->id;
 		}
 
+		public function getUrl() {
+			return './user/' . $this->id;
+		}
 		public function getUsername() {
 			return $this->username;
 		}

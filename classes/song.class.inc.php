@@ -184,16 +184,17 @@
 		public static function songsIncludedIn( $album ) {
 			$db = $_SESSION['db'];
 			$songs = array();
-			$stmt = $db->query( "select s.id from song s 
+			$stmt = $db->prepare( "select s.id from song s 
 								inner join include i 
 								on s.id = i.song 
 								where i.album = ?
-								order by a.date desc;" );
+								order by i.track;" );
 			$stmt->execute( array(
 				$album
 			) );
 			while ( $song = $stmt->fetch(PDO::FETCH_NUM) )
 				$songs[] = new Song( $song[0] );
+			$stmt->closeCursor();
 			return $songs;
 		}
 
