@@ -74,8 +74,6 @@
 		}
 
 		public function getReleaseDate( $format = "" ) {
-			# TODO
-			# Timestamp format
 			return $this->releaseDate;
 		}
 
@@ -105,8 +103,6 @@
 		}
 
 		public function getUploadDate( $format = "" ) {
-			# TODO
-			# Timestamp format
 			return $this->uploadDate;
 		}
 
