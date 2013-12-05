@@ -376,12 +376,24 @@ select.form-control {
 	color: #fff;
 }
 
-p a, p a:visited, p a:hover, p a:active {
+p a, p a:visited, p a:hover, p a:active,
+h1 a, h1 a:visited, h1 a:hover, h1 a:active,
+h2 a, h2 a:visited, h2 a:hover, h2 a:active,
+h3 a, h3 a:visited, h3 a:hover, h3 a:active,
+h4 a, h4 a:visited, h4 a:hover, h4 a:active,
+h5 a, h5 a:visited, h5 a:hover, h5 a:active,
+h6 a, h6 a:visited, h6 a:hover, h6 a:active {
 	color: #fff;
 	border-bottom: dotted 1px #fff;
 }
 
-p a:hover {
+p a:hover,
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
 	text-decoration: none;
 	border-bottom: solid 1px #fff;
 }

@@ -1,6 +1,5 @@
 <?php
 	require_once "config/config.inc";
-	print $_GET['id'];
 	$artist = new Artist($_GET['id']);
 ?>
 <!doctype html>

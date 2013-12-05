@@ -1,12 +1,6 @@
 ErrorDocument 404 /404.php
-ErrorDocument 403 http://adegieter.com/403.php
 
 Options +FollowSymlinks
 RewriteEngine on
 RewriteBase /Users/antoine/Sites/musiclib
 
-RewriteRule ^((song/([0-9]+))+)(\.html?)?$  ./song.php?id=$3 [L]
-RewriteRule ^((artist/([0-9]+))+)(\.html?)?$  ./artist.php?id=$3 [L]
-RewriteRule ^((album/([0-9]+))+)(\.html?)?$  ./album.php?id=$3 [L]
-RewriteRule ^((user/([0-9]+))+)(\.html?)?$  ./user.php?id=$3 [L]
-RewriteRule ^((profile)+)(\.html?)?$  ./profile.php [L]

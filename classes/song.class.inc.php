@@ -60,10 +60,8 @@
 			return './song/' . $this->id;
 		}
 		
-		public function getDuration( $format = "%s" ) {
-			# TODO
-			# Format duration
-			return $this->duration;
+		public function getDuration( $format = "i:s" ) {
+			return gmdate($format,$this->duration);
 		}
 
 		public function getLyrics() {
