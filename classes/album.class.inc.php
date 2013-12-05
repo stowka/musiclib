@@ -60,6 +60,10 @@
 		public function getId() {
 			return $this->id;
 		}
+
+		public function getUrl() {
+			return './album/' . $this->id;
+		}
 		
 		public function getName() {
 			return utf8_encode( $this->name );
