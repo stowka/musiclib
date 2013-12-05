@@ -1,5 +1,6 @@
 <?php
-	$top_album = Album::top()[0];
+	$top_album = Album::top();
+	$top_album = $top_album[0];
 ?>
 <div class="nephritis">
 	<div>

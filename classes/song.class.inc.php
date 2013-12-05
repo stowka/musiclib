@@ -277,9 +277,9 @@
 								limit 0, ?;" );
 			$stmt->bindParam(1, $number, PDO::PARAM_INT);
 			$stmt->execute();
-			$song = $stmt->fetch(PDO::FETCH_NUM);
-			$song = new Song( $song[0] );
+			while ( $song = $stmt->fetch(PDO::FETCH_NUM) )
+				$songs[] = new Song( $song[0] );
 			$stmt->closeCursor();
-			return $song;
+			return $songs;
 		}
 	}

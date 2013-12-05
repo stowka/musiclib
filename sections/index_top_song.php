@@ -1,5 +1,6 @@
 <?php
 	$top_song = Song::top();
+	$top_song = $top_song[0];
 ?>
 <div class="belize-hole">
 	<div>
@@ -14,7 +15,7 @@
 				<div class="progress-bar silver" role="progressbar" aria-valuenow="<?php print (int)($top_song->getAverage() * 10); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php print (int)($top_song->getAverage() * 10); ?>%"></div>
 			</div>
 			<p class="padded">
-				<?php print Song::top()->getTitle(); ?><br>
+				<?php print $top_song->getTitle(); ?><br>
 				<small>by <?php print $top_song->getMainArtist(); ?></small><br>
 			</p>
 			<div class="row">

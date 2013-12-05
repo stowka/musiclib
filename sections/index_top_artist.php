@@ -1,5 +1,6 @@
 <?php
-	$top_artist = Artist::top()[0];
+	$top_artist = Artist::top();
+	$top_artist = $top_artist[0];
 ?>
 <div class="pomegranate">
 	<div>
