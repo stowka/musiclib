@@ -6,7 +6,7 @@
 						</p>
 						<h1 style="display:inline-block; vertical-align:middle">
 							<?php print $artist; ?><br>
-							<small class="muted"> 
+							<small class="text-clouds"> 
 							<?php 
 							$raterCount = $artist->countRaters();
 							if ($raterCount > 0)
