@@ -5,6 +5,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta author="Antoine De Gieter">
 		<title><?php print TITLE; ?></title>
 
 		<?php
