@@ -97,7 +97,7 @@ _User_:
 
 - getRatedSongCount()
   - returns an integer: number of songs rated
-  - 
+
 - getCommentedSongCount()
   - returns an integer: number of songs commented
 
