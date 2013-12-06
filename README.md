@@ -4,7 +4,6 @@ musiclib
 Social network - music
 
 __Classe usage:__
-=================
 
 _User_:
 
@@ -38,10 +37,10 @@ _User_:
 
 - setEmail( $email:string )
   - changes the email
-  - 
+
 - setPassword( $password:string )
   - changes the password
-  - 
+
 - setPublicEmail( $public: boolean )
   - changes the visibility of the email (true = public, false = private)
 
@@ -86,7 +85,7 @@ _User_:
 
 - getRatedSongs()
   - returns an array of Song rated by the current User 
-  - 
+
 - getCommentedSongs()
   - returns an array of Song commented by the current User
 
@@ -101,7 +100,7 @@ _User_:
   - 
 - getCommentedSongCount()
   - returns an integer: number of songs commented
-  - 
+
 ---
 
 - static login( $username:string, $password:string )
@@ -124,7 +123,7 @@ _User_:
 
 - static validateEmail( $email:string )
   - returns true if the email is genuine, false otherwise
-  
+
 - static matchUsernamePassword( $username:string, $password:string )
   - returns 1 if the username matches the password, 0 otherwise
 
