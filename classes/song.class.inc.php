@@ -73,7 +73,7 @@
 			$stmt = $this->db->prepare( "select g.id from `belong` b 
 										inner join genre g
 										on b.genre = g.id 
-										where b.album = ?" );
+										where b.song = ?" );
 			$stmt->execute( array(
 				$this->id
 			) );
