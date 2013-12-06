@@ -6,7 +6,7 @@
 		const DB_HOST = "localhost";
 		const DB_NAME = "musiclib";
 		const DB_USER = "root";
-		const DB_PASSWORD = "01173022";
+		const DB_PASSWORD = "****";
 
 		public function __construct() {
 			$this->connect();
