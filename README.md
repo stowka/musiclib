@@ -124,7 +124,7 @@ _User_:
 
 - static validateEmail( $email:string )
   - returns true if the email is genuine, false otherwise
-  - 
+  
 - static matchUsernamePassword( $username:string, $password:string )
   - returns 1 if the username matches the password, 0 otherwise
 
