@@ -357,6 +357,11 @@ select.form-control {
 	padding: 12px;
 }
 
+select.form-control.alternate {
+	font-size: 1.2em;
+	padding: 5px;
+}
+
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-nav>li>a,
