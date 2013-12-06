@@ -77,22 +77,7 @@
 			$stmt->execute( array(
 				$this->id
 			) );
-			while ( $genre = $stmt->fetch(PDO::FETCH_NUM)
-				$genres[] = new Genre( $genre[0] );
-			$stmt->closeCursor();
-			return $genres;
-		}
-
-		public function getGenres() {
-			$genres = array();
-			$stmt = $this->db->prepare( "select g.id from `belong` b 
-										inner join genre g
-										on b.genre = g.id 
-										where b.album = ?" );
-			$stmt->execute( array(
-				$this->id
-			) );
-			while ( $genre = $stmt->fetch(PDO::FETCH_NUM)
+			while ( $genre = $stmt->fetch(PDO::FETCH_NUM) )
 				$genres[] = new Genre( $genre[0] );
 			$stmt->closeCursor();
 			return $genres;
@@ -104,7 +89,7 @@
 			$stmt->execute( array(
 				$this->id
 			) );
-			while ( $comment = $stmt->fetch(PDO::FETCH_NUM)
+			while ( $comment = $stmt->fetch(PDO::FETCH_NUM) )
 				$comments[] = new Comment( $comment[0] );
 			$stmt->closeCursor();
 			return $comments;
