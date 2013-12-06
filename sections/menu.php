@@ -14,7 +14,7 @@
 		<div class="collapse navbar-collapse midnight-blue" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="./"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-				<!--<li><a href=""><span class="glyphicon glyphicon-stats"></span> Tops</a></li>-->
+				<li><a href="./tops"><span class="glyphicon glyphicon-stats"></span> Tops</a></li>
 			</ul>
 
 			<?php
@@ -27,8 +27,8 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./img/users/<?php print $user->getPicture(); ?>" width="20px"> <?php print $user->getUsername(); ?> <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="profile">Profile</a></li>
-								<li><a href="add">Add</a></li>
-								<li><a href="search">Advanced search</a></li>
+								<!-- <li><a href="add">Add</a></li> -->
+								<!-- <li><a href="search">Advanced search</a></li> -->
 								<li class="divider"></li>
 								<li><a href="#" onclick="javascript:$('#logout').submit();">Log out</a></li>
 							</ul>
@@ -57,7 +57,7 @@
 
 			<form class="navbar-form navbar-right" role="search" action="result.php" method="get">
 				<div class="form-group">
-					<input type="search" name="q" class="form-control" placeholder="Search music" value="<?php if ( isset( $_GET['q'] ) ) print $_GET['q']; ?>">
+					<input type="search" name="q" class="form-control" placeholder="Search music" value="<?php if ( isset( $_GET['q'] ) ) print $_GET['q']; ?>" required>
 				</div>
 				<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 			</form>

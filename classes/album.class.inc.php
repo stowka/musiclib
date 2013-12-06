@@ -150,11 +150,13 @@
 									inner join include i 
 									on i.song = s.id
 									) on r.song = s.id
-									where i.album = ?
+									where i.album = ? 
+									group by i.album
 									) as album_average, album a
 									inner join include i 
 									on i.album = a.id
-									where a.id = ?;" );
+									where a.id = ?
+									group by a.id;" );
 			$stmt->execute( array(
 				$this->id,
 				$this->id

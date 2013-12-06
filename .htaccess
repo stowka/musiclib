@@ -1,6 +1,8 @@
-ErrorDocument 404 /404.php
+ErrorDocument 404 /index.html
 
 Options +FollowSymlinks
 RewriteEngine on
-RewriteBase /Users/antoine/Sites/musiclib
+RewriteBase /home/adegiete/public_html/subdomains/amicalle
 
+RewriteRule ^(reservation\.html)$ reservation.php [L]
+RewriteRule ^(admin\.html)$ admin.php [L]

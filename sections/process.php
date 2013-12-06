@@ -43,6 +43,7 @@
 	/**
 	 * @author Jérôme Boesch
 	 * 
+	 * @todo accents, no result
 	 */
 	if ( isset($_GET['q']) && (!empty( $_GET['q'])) ):
 		$db = $_SESSION['db'];
@@ -54,7 +55,7 @@
 		$search_users = array();
 
 		# Songs
-		$stmt = $db->prepare( "select id from song where title like ?;" );
+		$stmt = $db->prepare( "select id from song where title like ? order by title;" );
 		$stmt->execute( array(
 			'%'.$q.'%'
 		) );
@@ -66,7 +67,7 @@
 		$stmt->closeCursor();
 
 		# Albums
-		$stmt = $db->prepare( "select id from album where name like ?;" );
+		$stmt = $db->prepare( "select id from album where name like ? order by name;" );
 		$stmt->execute( array(
 			'%'.$q.'%'
 		) );
@@ -79,7 +80,7 @@
 
 
 		# Artist
-		$stmt = $db->prepare( "select id from artist where name like ?;" );
+		$stmt = $db->prepare( "select id from artist where name like ? order by name;" );
 		$stmt->execute( array(
 			'%'.$q.'%'
 		) );
@@ -92,7 +93,7 @@
 
 
 		# Users
-		$stmt = $db->prepare( "select id from user where username like ?;" );
+		$stmt = $db->prepare( "select id from user where username like ? order by username;" );
 		$stmt->execute( array(
 			'%'.$q.'%'
 		) );

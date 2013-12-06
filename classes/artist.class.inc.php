@@ -119,7 +119,8 @@
 										where r.song = s.id
 										and p.song = s.id
 										and p.artist = a.id
-										and a.id = ?;" );
+										and a.id = ?
+										group by a.id;" );
 			$stmt->execute( array(
 				$this->id
 			) );

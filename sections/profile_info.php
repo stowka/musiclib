@@ -26,8 +26,8 @@
 	</p>
 
 	<p class="padded">
-		<a class="btn btn-info btn-block" href="add">Add artist</a>
-		<a class="btn btn-info btn-block" href="add">Add album</a>
+		<a class="btn btn-info btn-block" href="add" disabled>Add artist</a>
+		<a class="btn btn-info btn-block" href="add" disabled>Add album</a>
 	</p>
 	<hr>
 	<p class="padded">
