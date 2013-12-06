@@ -10,7 +10,6 @@ _User_:
 
 - getId()
   - returns the User id
-  - 
 - getUrl()
   - returns the User URL
 
