@@ -5,6 +5,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta author="Alexis Beaujon">
 		<title>
 			<?php print TITLE; ?>
 		</title>
