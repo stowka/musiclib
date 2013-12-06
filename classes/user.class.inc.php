@@ -249,7 +249,7 @@
 		}
 
 		public function getPicture() {
-			return !empty($this->picture) ? $this->picture : "default.png";
+			return !empty($this->picture) ? $this->picture : "default.jpg";
 		}
 
 		public function isActive() {

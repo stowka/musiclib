@@ -39,10 +39,10 @@
 	</h1>
 	<div class="btn-group btn-group-lg pull-right">
 		<button class="btn btn-success" type="button" title="Right informations">
-			 <span class="glyphicon glyphicon-thumbs-up"> 0 </span>
+			 <span class="glyphicon glyphicon-ok"> 0 </span>
 		</button>
 		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button" title="Wrong informations">
-			 <span class="glyphicon glyphicon-thumbs-down"> 0 </span>
+			 <span class="glyphicon glyphicon-ban-circle"> 0 </span>
 			 <span class="caret"></span>
 		</button>	
 		<ul class="dropdown-menu" role="menu">
