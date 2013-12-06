@@ -62,7 +62,7 @@
 		}
 
 		public function getUrl() {
-			return './album/.php?id=' . $this->id;
+			return './album.php?id=' . $this->id;
 		}
 		
 		public function getName() {
