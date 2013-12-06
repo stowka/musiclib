@@ -61,7 +61,7 @@
 		}
 
 		public function getUrl() {
-			return './artist/' . $this->id;
+			return './artist.php?id=' . $this->id;
 		}
 		
 		public function getName() {

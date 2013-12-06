@@ -230,7 +230,7 @@
 		}
 
 		public function getUrl() {
-			return './user/' . $this->id;
+			return './user.php?id=' . $this->id;
 		}
 		public function getUsername() {
 			return $this->username;

@@ -57,7 +57,7 @@
 		}
 		
 		public function getUrl() {
-			return './song/' . $this->id;
+			return './song.php?id=' . $this->id;
 		}
 		
 		public function getDuration( $format = "i:s" ) {
@@ -68,16 +68,74 @@
 			return nl2br( utf8_encode( $this->lyrics ) );
 		}
 
-		public function getMainArtist() {
-			$stmt = $this->db->prepare( "select a.id from `perform` p 
-										inner join artist a on a.id = p.artist 
-										where p.song = ? order by a.id limit 0, 1" );
+		public function getGenres() {
+			$genres = array();
+			$stmt = $this->db->prepare( "select g.id from `belong` b 
+										inner join genre g
+										on b.genre = g.id 
+										where b.album = ?" );
 			$stmt->execute( array(
 				$this->id
 			) );
-			$artist = $stmt->fetch(PDO::FETCH_NUM);
+			while ( $genre = $stmt->fetch(PDO::FETCH_NUM)
+				$genres[] = new Genre( $genre[0] );
 			$stmt->closeCursor();
-			return new Artist( $artist[0] );
+			return $genres;
+		}
+
+		public function getGenres() {
+			$genres = array();
+			$stmt = $this->db->prepare( "select g.id from `belong` b 
+										inner join genre g
+										on b.genre = g.id 
+										where b.album = ?" );
+			$stmt->execute( array(
+				$this->id
+			) );
+			while ( $genre = $stmt->fetch(PDO::FETCH_NUM)
+				$genres[] = new Genre( $genre[0] );
+			$stmt->closeCursor();
+			return $genres;
+		}
+
+		public function getComments() {
+			$comments = array();
+			$stmt = $this->db->prepare( "select id from `comment` where album = ?" );
+			$stmt->execute( array(
+				$this->id
+			) );
+			while ( $comment = $stmt->fetch(PDO::FETCH_NUM)
+				$comments[] = new Comment( $comment[0] );
+			$stmt->closeCursor();
+			return $comments;
+		}
+
+		public function getArtists() {
+			$artists = array();
+			$stmt = $this->db->prepare( "select a.id from `perform` p 
+										inner join artist a on a.id = p.artist 
+										where p.song = ?" );
+			$stmt->execute( array(
+				$this->id
+			) );
+			while ( $artist = $stmt->fetch(PDO::FETCH_NUM) )
+				$artists[] = new Artist( $artist[0] );
+			$stmt->closeCursor();
+			return $artists;
+		}
+
+		public function getAlbums() {
+			$albums = array();
+			$stmt = $this->db->prepare( "select a.id from `include` i 
+										inner join album a on a.id = i.album 
+										where i.song = ?" );
+			$stmt->execute( array(
+				$this->id
+			) );
+			while ( $album = $stmt->fetch(PDO::FETCH_NUM) )
+				$albums[] = new Album( $album[0] );
+			$stmt->closeCursor();
+			return $albums;
 		}
 
 		public function getMainAlbum() {
@@ -90,6 +148,18 @@
 			$album = $stmt->fetch(PDO::FETCH_NUM);
 			$stmt->closeCursor();
 			return new Album( $album[0] );
+		}
+
+		public function getMainArtist() {
+			$stmt = $this->db->prepare( "select a.id from `perform` p 
+										inner join artist a on a.id = p.artist 
+										where p.song = ? order by a.id limit 0, 1" );
+			$stmt->execute( array(
+				$this->id
+			) );
+			$artist = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return new Artist( $artist[0] );
 		}
 
 		public function getAverage() {
