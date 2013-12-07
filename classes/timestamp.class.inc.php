@@ -13,6 +13,10 @@
 			$this->ts = $ts;
 		}
 
+		public function getTs() {
+			return $this->ts;
+		}
+
 		public function format( $format ) {
 			return date( $format, $this->ts );
 		}
@@ -39,6 +43,14 @@
 
 		public function second() {
 			return date( 's', $this->ts );
+		}
+
+		/**
+		 * @Override
+		 * toString method
+		 */
+		public function __toString() {
+			return $this->ts;
 		}
 
 		/* ===

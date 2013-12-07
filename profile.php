@@ -25,12 +25,17 @@
 					<?php
 						require_once "sections/profile_info.php";
 					?>
+
+					<?php
+						require_once "sections/profile_matched_users.php";
+					?>
 				</div>
 
 				<div class="col-md-8">
 					<?php
 						require_once "sections/profile_activities.php";
 					?>
+
 					<?php
 						require_once "sections/profile_connection_log.php";
 					?>

@@ -113,7 +113,7 @@
 										inner join artist a on a.id = r.artist 
 										where r.album = :album order by a.id limit 0, :limit;" );
 			$stmt->bindParam("album", $this->id, PDO::PARAM_INT);
-			if ($number !== -1 )
+			if ( $number !== -1 )
 				$stmt->bindParam("limit", $number, PDO::PARAM_INT);
 			$stmt->execute();
 			while ( $artist = $stmt->fetch(PDO::FETCH_NUM) )
