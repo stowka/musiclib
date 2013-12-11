@@ -6,7 +6,7 @@
 	}
 
 	$activities = array_merge( $user->getRatedSongs( "date", 3 ), $user->getCommentedSongs( "date", 3 ) );
-	usort($activities, 'compareDates');
+	usort($activities, "Activity::sort");
 	foreach ( $activities as $activity ) :
 		if ( $activity instanceof Rate ) :
 ?>
