@@ -1,14 +1,18 @@
-Classes: Notarize, NotarizeArtist, NotarizeAlbum, GradeComment
-Editer profil
-Afficher matched user
+Classes: 
+    Notarize, - done
+    NotarizeArtist, - done
+    NotarizeAlbum, - done
+    GradeComment
+Editer profil - Antoine
+Afficher matched user - Antoine
 Touche entrée pour login / sign in
-Supression des commentaires
-Noter les chansons
-Grade comments
-Know / Owned
+Supression des commentaires - Antoine
+Noter les chansons - Antoine
+Grade comments - Antoine
+Know / Owned - Antoine
 API Lyrics
 Envoyer mail reset password
-404 pour wrong id (user, song, artist, album)
+404 pour wrong id (user, song, artist, album) - Antoine
 Preparer toutes les requetes dans toutes les classes
-Add artist, album (+ songs)
+Add artist, album (+ songs) - Alexis
 
