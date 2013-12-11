@@ -89,7 +89,7 @@
 				$this->id,
 				$user
 			) );
-			$hasCommented = $stmt->fetch(PDO::FETCH_NUM)
+			$hasCommented = $stmt->fetch(PDO::FETCH_NUM);
 			$stmt->closeCursor();
 			return $hasCommented;
 		}
