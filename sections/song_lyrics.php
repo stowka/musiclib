@@ -1,3 +1,10 @@
+<?php
+	/**
+	 *
+	 * @author Antoine Mady
+	 *
+	 */
+?>
 <div class="green-sea">
 
 	<h3 class="padded">Lyrics</h3>

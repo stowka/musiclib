@@ -2,6 +2,7 @@
 	# Status variables
 	$loggedIn = false;
 	$signedIn = false;
+	$commented = false;
 
 	# Process log in
 	if ( isset( $_POST['login'] ) 
@@ -37,6 +38,31 @@
 		$_SESSION['user'] = new User(User::login( $user, $passwd ));
 		$_SESSION['online'] = true;
 		$signedIn = true;
+	endif;
+
+	# Process comment
+	if ( isset( $_POST['comment'] )
+	&& isset( $_POST['song'] )
+	&& is_numeric( $_POST['song'] )
+	&& isset( $_POST['text'] )
+	&& !empty( $_POST['text'] )
+	&& preg_match( "/[a-zA-Z0-9]/", trim( $_POST['text'] ) )
+	&& isset( $_SESSION['online'] )
+	&& $_SESSION['online'] ) :
+		$db = $_SESSION['db'];
+		$song = new Song( $_POST['song'] );
+		$user_id = $_SESSION['user']->getId();
+		$text = htmlspecialchars( trim( $_POST['text'] ) );
+		$stmt = $song->userHasCommented( $user_id ) 
+		? $db->prepare( "update comment set text = :text, date = unix_timestamp() where user = :user and song = :song;" ) 
+		: $db->prepare( "insert into comment (user, song, text, date) values (:user, :song, :text, unix_timestamp());" );
+		$stmt->execute( array(
+			"user" => $user_id,
+			"song" => $song->getId(),
+			"text" => $text
+		) );
+		$stmt->closeCursor();
+		$commented = true;
 	endif;
 
 	# Process regular search

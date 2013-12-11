@@ -403,3 +403,21 @@ td a:hover {
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0px;
 }
+
+.btn-group-xs > .btn, .btn-group-sm > .btn, .btn-group-lg > .btn, .btn {
+	border-radius: 0px;
+}
+
+.btn:hover {
+	border-color: rgba(0, 0, 0, 0);
+}
+
+blockquote{
+	border-left:none;
+	text-align:justify;
+
+}
+
+blockquote>p {
+	font-size:1em;
+}

@@ -1,10 +1,17 @@
+<?php
+	/**
+	 *
+	 * @author Antoine Mady
+	 *
+	 */
+?>
 <div class="belize-hole">
 	<div class="row" style="height:300px">
 		<div class="col-md-6">
 			<h1 class="padded"  style="margin: 50px;">
 				<?php print $song ?> <br>
 				<small class="text-clouds">
-					by <a href="<?php print $song->getMainArtist()->getUrl(); ?>"><?php print $song->getMainArtist(); ?> </a>
+					by <a href="<?php print $song->getMainArtist()->getUrl(); ?>"><?php print $song->getMainArtist(); ?></a>
 				</small><br>
 				<small class="text-clouds">
 					<?php
@@ -24,6 +31,9 @@
 				
 			</h1>
 		</div>
+<?php
+	if(isset($_SESSION['online']) && $_SESSION['online']):
+?>
 		<div class="col-md-6">
 			<div class="btn-group btn-group-lg pull-right">
                 <button class="btn btn-info" type="button">
@@ -42,5 +52,8 @@
 
         	</h3> -->
 		</div>
+<?php
+	endif;
+?>
 	</div>
 </div>

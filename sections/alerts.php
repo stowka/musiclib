@@ -31,6 +31,21 @@
 ?>
 
 <?php
+	if ( $commented ):
+?>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="alert alert-success">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Your commented has been successfully posted!</strong><br>
+				</div>
+			</div>
+		</div>
+<?php
+	endif;
+?>
+
+<?php
 	if ( isset( $_SESSION['online'] )
 	&& $_SESSION['online'] 
 	&& !$_SESSION['user']->isActive() ):

@@ -1,3 +1,10 @@
+<?php
+	/**
+	 *
+	 * @author Antoine Mady
+	 *
+	 */
+?>
 <div class="pomegranate">
 			<?php 
 				foreach ( $song->getAlbums() as $album )

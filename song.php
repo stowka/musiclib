@@ -12,24 +12,6 @@
 		<?php
 			require_once "sections/links.php";
 		?>
-	<style type="text/css">
-		.btn-group-lg>.btn{
-			border-radius:0px;
-		}
-		blockquote{
-			border-left:none;
-			text-align:justify;
-
-		}
-
-		blockquote>p {
-			font-size:1em;
-		}
-
-		/*TODO
-		Mettre dans le fichier CSS
-		Arranger le blockquote*/
-	</style>
 	</head>
 
 
