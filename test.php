@@ -3,5 +3,6 @@
 
 	$db = $_SESSION['db'];
 
-	$u = new User( 1 );
-	print_r($u->getConnectionLog());
+	$act = Activity::lastActivities( 1 );
+	foreach ($act as $a)
+		print $a . PHP_EOL;

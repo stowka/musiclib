@@ -21,11 +21,11 @@
 				$user,
 				$song
 			) );
-			$type = $stmt->fetch(PDO::FETCH_ASSOC);
+			$comment = $stmt->fetch(PDO::FETCH_ASSOC);
 			$this->user = new User( $user );
 			$this->song = new Song( $song );
-			$this->text = $type['text'];
-			$this->date = new Timestamp( $type['date'] );
+			$this->text = $comment['text'];
+			$this->date = new Timestamp( $comment['date'] );
 		}
 
 		/*

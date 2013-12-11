@@ -21,11 +21,11 @@
 				$user,
 				$song
 			) );
-			$type = $stmt->fetch(PDO::FETCH_ASSOC);
+			$rate = $stmt->fetch(PDO::FETCH_ASSOC);
 			$this->user = new User( $user );
 			$this->song = new Song( $song );
-			$this->grade = $type['grade'];
-			$this->date = new Timestamp( $type['date'] );
+			$this->grade = $rate['grade'];
+			$this->date = new Timestamp( $rate['date'] );
 		}
 
 		/*
