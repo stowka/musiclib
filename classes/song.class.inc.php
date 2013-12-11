@@ -83,6 +83,17 @@
 			return $genres;
 		}
 
+		public function userHasCommented( $user ) {
+			$stmt = $this->db->prepare( "select count(*) from `comment` where song = ? and user = ?" );
+			$stmt->execute( array(
+				$this->id,
+				$user
+			) );
+			$hasCommented = $stmt->fetch(PDO::FETCH_NUM)
+			$stmt->closeCursor();
+			return $hasCommented;
+		}
+
 		public function getComments() {
 			$comments = array();
 			$stmt = $this->db->prepare( "select user from `comment` where song = ?" );
