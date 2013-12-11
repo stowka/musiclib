@@ -7,7 +7,9 @@
 	 */
 	
 	require_once "config/config.inc";
-	$oUser = new User($_GET['id']);
+	if(isset($_GET['id'])){
+		$oUser = new User($_GET['id']);
+	}
 ?>
 <!doctype html>
 <html lang="en">
