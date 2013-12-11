@@ -52,7 +52,7 @@
 		$db = $_SESSION['db'];
 		$song = new Song( $_POST['song'] );
 		$user_id = $_SESSION['user']->getId();
-		$text = htmlspecialchars( trim( $_POST['text'] ) );
+		$text = preg_replace( "/_3/", "&hearts;", htmlspecialchars( trim( preg_replace( "/<3/", "_3", $_POST['text'] ) ) ) );
 		$stmt = $song->userHasCommented( $user_id ) 
 		? $db->prepare( "update comment set text = :text, date = unix_timestamp() where user = :user and song = :song;" ) 
 		: $db->prepare( "insert into comment (user, song, text, date) values (:user, :song, :text, unix_timestamp());" );
@@ -73,7 +73,7 @@
 	 */
 	if ( isset($_GET['q']) && (!empty( $_GET['q'])) ):
 		$db = $_SESSION['db'];
-		$q = $_GET['q'];
+		$q = htmlspecialchars( $_GET['q'] );
 
 		$search_songs = array();
 		$search_albums = array();

@@ -18,7 +18,7 @@
 			<p>
 				<input type="hidden" name="song" value="<?php print $song->getId(); ?>">
 				<input type="hidden" name="comment">
-				<textarea placeholder="Write your own comment!" maxlength="128" class="form-control" name="text" required><?php if ($song->userHasCommented($user->getId())) print new Comment( $user->getId(), $song->getId() ); ?></textarea>
+				<textarea placeholder="Write your own comment!" maxlength="128" class="form-control" name="text" required><?php if ($song->userHasCommented($user->getId())) print preg_replace( "/&hearts;/", "<3", new Comment( $user->getId(), $song->getId() ) ); ?></textarea>
 			<br>
 			<button class="btn btn-info btn-block"><?php print $song->userHasCommented($user->getId()) ? 'Update my comment' : 'Comment'; ?></button>
 			</p>
