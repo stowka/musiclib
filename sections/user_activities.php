@@ -1,7 +1,7 @@
 <div class="pomegranate">
 	<h4 class="padded">
 		Rates (<?php	print $oUser->getRatedSongCount(); ?>)
-	</h5>
+	</h4>
 	<p class="padded">
 		<?php
 			foreach ( $oUser->getRatedSongs( "date", 3 ) as $rate ):
