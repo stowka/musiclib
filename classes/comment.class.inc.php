@@ -6,11 +6,8 @@
 	 * and a Song when it's commented.
 	 *
 	 */
-	class Comment {
-		private $user;
-		private $song;
+	class Comment extends Activity {
 		private $text;
-		private $date;
 		
 		public function __construct( $user, $song ) {
 			($user && $song) || die( "Error: Wrong comment." );
@@ -50,21 +47,8 @@
 		 * GETTERS
 		 * ===
 		 */
-
-		public function getUser() {
-			return $this->user;
-		}
-
-		public function getSong() {
-			return $this->song;
-		}
-
 		public function getText() {
 			return utf8_encode( $this->text );
-		}
-
-		public function getDate() {
-			return $this->date;
 		}
 
 		/*

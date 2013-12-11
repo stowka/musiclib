@@ -6,11 +6,8 @@
 	 * and a Song when it's rated.
 	 *
 	 */
-	class Rate {
-		private $user;
-		private $song;
+	class Rate extends Activity {
 		private $grade;
-		private $date;
 		
 		public function __construct( $user, $song ) {
 			($user && $song) || die( "Error: Wrong rate." );
@@ -50,21 +47,8 @@
 		 * GETTERS
 		 * ===
 		 */
-
-		public function getUser() {
-			return $this->user;
-		}
-
-		public function getSong() {
-			return $this->song;
-		}
-
 		public function getGrade() {
 			return $this->grade;
-		}
-
-		public function getDate() {
-			return $this->date;
 		}
 
 		/*
