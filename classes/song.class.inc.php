@@ -91,7 +91,7 @@
 			) );
 			$hasCommented = $stmt->fetch(PDO::FETCH_NUM);
 			$stmt->closeCursor();
-			return $hasCommented;
+			return $hasCommented[0];
 		}
 
 		public function getComments() {
