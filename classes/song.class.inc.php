@@ -85,12 +85,12 @@
 
 		public function getComments() {
 			$comments = array();
-			$stmt = $this->db->prepare( "select user, song from `comment` where album = ?" );
+			$stmt = $this->db->prepare( "select user from `comment` where song = ?" );
 			$stmt->execute( array(
 				$this->id
 			) );
 			while ( $comment = $stmt->fetch(PDO::FETCH_NUM) )
-				$comments[] = new Comment( $comment[0], $comment[1] );
+				$comments[] = new Comment( $comment[0], $this->id );
 			$stmt->closeCursor();
 			return $comments;
 		}
