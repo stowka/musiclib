@@ -4,11 +4,11 @@
 	 *
 	 * Affichage d'infos de l'utilisateur
 	 * 
-	 */
+*/
 ?>
 
 <div class="belize-hole">
-		<p class="text-left">
+	<p class="text-left">
 		<img src="./img/users/<?php print $oUser->getPicture(); ?>" width="60%">
 	</p>
 	
@@ -29,3 +29,4 @@
 		</small>
 	
 	</p>
+<\div>
