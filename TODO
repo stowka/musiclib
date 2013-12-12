@@ -5,12 +5,12 @@ Classes:
     GradeComment
 Editer profil - Antoine
 Afficher matched user - Antoine
-Touche entrée pour login / sign in
+Touche entrée pour login / sign in - done
 Supression des commentaires - Antoine
 Noter les chansons - Antoine
 Grade comments - Antoine
 Know / Owned - Antoine
-API Lyrics
+API Lyrics - done 
 Envoyer mail reset password
 404 pour wrong id (user, song, artist, album) - Antoine
 Preparer toutes les requetes dans toutes les classes
