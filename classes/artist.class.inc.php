@@ -17,7 +17,7 @@
 
 		public function __construct( $id ) {
 			$id 
-			|| die( "Error: Wrong artist." );
+			|| Page::go404();
 			$this->db = $_SESSION['db'];
 			$this->fetchData( $id );
 		}
@@ -27,7 +27,8 @@
 			$stmt->execute( array(
 				$id
 			) );
-			$artist = $stmt->fetch(PDO::FETCH_ASSOC);
+			if ( !$artist = $stmt->fetch(PDO::FETCH_ASSOC) )
+				Page::go404();
 			$this->id = $id;
 			$this->name = $artist['name'];
 			$this->biography = $artist['biography'];

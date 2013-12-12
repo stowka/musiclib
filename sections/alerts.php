@@ -31,7 +31,7 @@
 ?>
 
 <?php
-	if ( $commented ):
+	if ( $commentPosted ):
 ?>
 		<div class="row">
 			<div class="col-md-12">

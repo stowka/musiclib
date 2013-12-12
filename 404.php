@@ -1,11 +1,11 @@
 <?php
 	require_once "config/config.inc";
-	isset( $_SESSION['online'] ) && $_SESSION['online'] || Page::go404();
 ?>
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta author="Antoine De Gieter">
 		<title><?php print TITLE; ?></title>
 
 		<?php
@@ -22,26 +22,18 @@
 			?>
 
 			<div class="row">
-				<div class="col-md-4">
-					<?php
-						require_once "sections/profile_info.php";
-					?>
-
-					<?php
-						require_once "sections/profile_matched_users.php";
-					?>
-				</div>
-
-				<div class="col-md-8">
-					<?php
-						require_once "sections/profile_activities.php";
-					?>
-
-					<?php
-						require_once "sections/profile_connection_log.php";
-					?>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="alizarin">
+						<h1 class="padded">
+							A 404 error just occured - Page not found
+						</h1>
+						<p class="padded">
+							It means this page doesn't exist or has been moved.
+						</p>
+					</div>
 				</div>
 			</div>
+
 		</section>
 
 		<?php

@@ -2,7 +2,12 @@
 	# Status variables
 	$loggedIn = false;
 	$signedIn = false;
-	$commented = false;
+	$commentPosted = false;
+	$commentUpdated = false;
+	$commentDeleted = false;
+	$gradeGiven = false;
+	$gradeUpdated = false;
+	$gradeDeleted = false;
 
 	# Process log in
 	if ( isset( $_POST['login'] ) 

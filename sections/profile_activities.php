@@ -39,7 +39,7 @@
 					</div>
 					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 						<h5 class="padded text-right">
-							"<?php print $activity->getText(); ?>"
+							"<?php print $activity; ?>"
 						</h5>
 					</div>
 				</div>

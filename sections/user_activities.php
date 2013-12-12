@@ -31,7 +31,7 @@
 				?>
 				<br>
 				"<?php
-					print $comment->getText();
+					print $comment;
 				?>"
 				<br>
 		<?php

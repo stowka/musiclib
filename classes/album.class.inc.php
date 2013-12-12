@@ -17,7 +17,7 @@
 
 		public function __construct( $id ) {
 			$id 
-			|| die( "Error: Wrong album." );
+			|| Page::go404();
 			$this->db = $_SESSION['db'];
 			$this->fetchData( $id );
 		}
@@ -27,7 +27,8 @@
 			$stmt->execute( array(
 				$id
 			) );
-			$album = $stmt->fetch(PDO::FETCH_ASSOC);
+			if ( !$album = $stmt->fetch(PDO::FETCH_ASSOC) )
+				Page::go404();
 			$this->id = $album['id'];
 			$this->name = $album['name'];
 			$this->disc = $album['disc'];

@@ -1,8 +1,2 @@
-ErrorDocument 404 /index.html
-
-Options +FollowSymlinks
-RewriteEngine on
-RewriteBase /home/adegiete/public_html/subdomains/amicalle
-
-RewriteRule ^(reservation\.html)$ reservation.php [L]
-RewriteRule ^(admin\.html)$ admin.php [L]
+ErrorDocument 404 /~antoine/musiclib/404.php
+ErrorDocument 403 /~antoine/musiclib/403.php

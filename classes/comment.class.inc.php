@@ -48,7 +48,7 @@
 		 * ===
 		 */
 		public function getText() {
-			return utf8_encode( $this->text );
+			return $this->text;
 		}
 
 		/*

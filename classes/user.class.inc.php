@@ -20,7 +20,7 @@
 		public function __construct( $id ) {
 			(is_numeric( $id ) 
 			&& (int)$id !== 0) 
-			|| die( "Error: Wrong username or password." );
+			|| Page::go404();
 			$this->db = $_SESSION['db'];
 			$this->fetchData( $id );
 		}
@@ -30,7 +30,8 @@
 			$stmt->execute( array(
 				$id
 			) );
-			$user = $stmt->fetch( PDO::FETCH_ASSOC );
+			if ( !$user = $stmt->fetch( PDO::FETCH_ASSOC ) )
+				Page::go404();
 			$stmt->closeCursor();
 			$this->id = $id;
 			$this->username = $user['username'];

@@ -14,14 +14,19 @@
 		private $lyrics;
 		
 		public function __construct( $id ) {
-			$id || die( "Error: Wrong song." );
+			$id || Page::go404();
 			$this->db = $_SESSION['db'];
 			$this->fetchData( $id );
 		}
 
 		public function fetchData( $id ) {
-			$stmt = $this->db->query( "select * from song where id = $id" );
-			$song = $stmt->fetch(PDO::FETCH_ASSOC);
+			$stmt = $this->db->prepare( "select * from song where id = ?" );
+			$stmt->execute( array(
+				$id
+			) );
+			if( !$song = $stmt->fetch(PDO::FETCH_ASSOC) )
+				Page::go404();
+			$stmt->closeCursor();
 			$this->id = $song['id'];
 			$this->title = $song['title'];
 			$this->duration = $song['duration'];
