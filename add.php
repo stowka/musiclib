@@ -29,21 +29,21 @@
 					<div class="peter-river">
 						<div class="tab-content">
 							<div class="tab-pane active nephritis" id="artists">
-								<form>
+								<form id="form-add-artist" action="" method="post">
 									<fieldset>
 										<p class="padded"></p>
 										<div class="row">
 											<div class="col-md-6">
-												<input type="text" name="name" placeholder="Name" required>
+												<input type="text" name="nameArtist" placeholder="Name" required>
 											</div>
 											<div class="col-md-6">
-												<input type="file" name="picture" value="Picture" required>
+												<input type="file" name="pictureArtist" value="Picture" required>
 											</div>
 										</div>
 										<br>
 										<div class="row">
 											<div class="col-md-12">
-												<textarea rows="5" name="bigraphy" placeholder="Biography" required></textarea>
+												<textarea rows="5" name="biography" placeholder="Biography" required></textarea>
 											</div>
 										</div>
 										<hr>
@@ -54,7 +54,14 @@
 												</p>
 											</div>
 											<div class="col-md-3">
-												<button type="submit" class="btn btn-default btn-lg btn-block">Submit</button>
+												<button type="button" class="btn btn-default btn-lg btn-block" onclick="$('#form-add-artist').submit();">Submit</button>
+												<?php
+													$nameAr = $_POST['nameArtist'];
+													$biography = $_POST['biography'];
+													$user = user->getId();
+													$picture = $_POST['pictureArtist'];
+													$artist->create( $nameAr, $biography, $user, $picture );
+												?>
 											</div>
 										</div>
 									</fieldset>
