@@ -60,4 +60,15 @@
 		public function setOwned( $owned ) {
 			$this->owned = $owned;
 		}
+
+		public static function userKnowsSong($user, $song){
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare( "" );
+			$stmt->execute( array(
+				$this->id
+			) );
+			$average = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $average[0];
+		} 
 	}

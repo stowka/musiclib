@@ -358,7 +358,7 @@
 		 *
 		 *
 		 */
-		public static function getLyrics( $artist, $title ) {
+		public static function getLyricsFromAPI( $artist, $title ) {
 			$artist = strtolower( preg_replace("/ /", "+", $artist) );
 			$title = strtolower( preg_replace("/ /", "+", $title) );
 			$lyrics = file_get_contents('http://api.ntag.fr/lyrics/?artist=' . $artist . '&title=' . $title);
