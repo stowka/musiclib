@@ -139,22 +139,18 @@
 	 * @author Jérôme Boesch 
 	 *
 	 */
-	if( isset( $message ) && isset( $text ) && !empty( $text ) ):
+	if( isset( $message ) && isset( $text ) && !empty( $text ) 
+		&& isset( $_SESSION['online'] && $_SESSION['online'] 
+		&& is_numeric($reason) && $reason::exists() ):
 
-		
-		$user = $_SESSION['user'];
-		$id = $user->getId();
+		$user = $user->getId();
 		$reason = $_POST['reason'];
 		$text = $_POST['text'];
-		$read = 0;
-		$date = date('d-m-y');
 
-		$stmt->prepare( "insert into message (id, user, text, date, read, reason) values (:id, :user, :text, unix_timestamp(), :read, :reason);" );
+		$stmt->prepare( "insert into message (user, text, date, reason) values (:user, :text, unix_timestamp(), :reason);" );
 		$stmt->execute( array(
-			':id' => $id,
 			':user' => $user,
 			':text' => $text,
-			':read' => $read,
 			':reason' => $reason
 		) );
 
