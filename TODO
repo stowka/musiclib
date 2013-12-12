@@ -16,4 +16,5 @@ Resize de toutes les images l'upload (user, artist)
 404 pour wrong id (user, song, artist, album) - Antoine
 Preparer toutes les requetes dans toutes les classes
 Add artist, album (+ songs) - Alexis
-
+No result pour la recherche (à discuter de ce qu'on y fait -> recherche avancée?)
+Recherche avancée
