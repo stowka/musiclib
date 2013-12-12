@@ -11,8 +11,8 @@
 			<div class="modal-body">
 				<form id="form-login" action="" method="post">
 					<input type="hidden" name="login">
-					<input type="text" name="username" placeholder="Username" class="form-control" required><br>
-					<input type="password" name="password" placeholder="Password" class="form-control" required><br>
+					<input type="text" name="username" placeholder="Username" class="form-control" onkeyup="javascript:enterKey(event, document.getElementById('form-login'));" required><br>
+					<input type="password" name="password" placeholder="Password" class="form-control" onkeyup="javascript:enterKey(event, document.getElementById('form-login'));" required><br>
 				</form>
 			</div>
 			<div class="modal-footer">
@@ -36,10 +36,10 @@
 			<div class="modal-body">
 				<form id="form-signin" action="" method="post">
 					<input type="hidden" name="signin">
-					<input type="text" name="username" placeholder="Username" class="form-control" required><br>
-					<input type="email" name="email" placeholder="E-mail" class="form-control" required><br>
-					<input type="password" name="password" id="password1" placeholder="Password" class="form-control" required><br>
-					<input type="password" name="password-confirm" id="password2" placeholder="Confirm password" class="form-control" required>
+					<input type="text" name="username" placeholder="Username" class="form-control" onkeyup="javascript:enterKey(event, document.getElementById('form-signin'));" required><br>
+					<input type="email" name="email" placeholder="E-mail" class="form-control" onkeyup="javascript:enterKey(event, document.getElementById('form-signin'));" required><br>
+					<input type="password" name="password" id="password1" placeholder="Password" class="form-control" onkeyup="javascript:enterKey(event, document.getElementById('form-signin'));" required><br>
+					<input type="password" name="password-confirm" id="password2" placeholder="Confirm password" class="form-control" onkeyup="javascript:enterKey(event, document.getElementById('form-signin'));" required>
 				</form>
 			</div>
 			<div class="modal-footer">
