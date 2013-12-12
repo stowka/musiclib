@@ -1,6 +1,7 @@
 <?php
 	/*
 	 * @author Valentin BRICE
+	 * corrected by Antoine De Gieter
 	 *
 	 * Page de profil d'un utilisateur
 	 * 
