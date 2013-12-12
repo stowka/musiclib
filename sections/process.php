@@ -134,3 +134,29 @@
 
 		$stmt->closeCursor();
 	endif;
+	
+	/**
+	 * @author Jérôme Boesch 
+	 *
+	 */
+	if( isset( $message ) && isset( $text ) && !empty( $text ) ):
+
+		
+		$user = $_SESSION['user'];
+		$id = $user->getId();
+		$reason = $_POST['reason'];
+		$text = $_POST['text'];
+		$read = 0;
+		$date = date('d-m-y');
+
+		$stmt->prepare( "insert into message (id, user, text, date, read, reason) values (:id, :user, :text, unix_timestamp(), :read, :reason);" );
+		$stmt->execute( array(
+			':id' => $id,
+			':user' => $user,
+			':text' => $text,
+			':read' => $read,
+			':reason' => $reason
+		) );
+
+		$stmt->closeCursor();
+	endif;
