@@ -140,7 +140,7 @@
 	 *
 	 */
 	if( isset( $_POST['text'] ) && isset( $_POST['reason'] ) && !empty( $_POST['text'] ) 
-		&& isset( $_SESSION['online'] && $_SESSION['online'] 
+		&& isset( $_SESSION['online'] ) && $_SESSION['online'] 
 		&& is_numeric( $_POST['reason'] ) && Reason::exists( $_POST['reason'] ) ):
 
 		$user = $user->getId();
