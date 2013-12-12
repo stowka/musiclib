@@ -58,7 +58,7 @@
 												<?php
 													$nameAr = $_POST['nameArtist'];
 													$biography = $_POST['biography'];
-													$user = user->getId();
+													$user = $user->getId();
 													$picture = $_POST['pictureArtist'];
 													$artist->create( $nameAr, $biography, $user, $picture );
 												?>
