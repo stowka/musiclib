@@ -72,9 +72,30 @@
 			</div>
 			<div class="modal-body">
 				<form id="form-edit-profile" action="" method="post">
-					<!--
-						TODO DES FAMILLES !!!
-					-->
+					<input type="email" name="email" class="form-control" placeholder="E-mail" value="<?php print $user->getEmail(); ?>"><br>
+					<input type="password" name="password" class="form-control" placeholder="Old Password"><br>
+					<input type="password" name="password" class="form-control" placeholder="New Password"><br>
+					<input type="password" name="password2" class="form-control" placeholder="Confirm your new password"><br>
+					Email:<br>
+					<div class="btn-group btn-block" data-toggle="buttons">
+						<label class="btn btn-default <?php	if ( $user->isPublicEmail() ) print 'active'; ?>">
+							<input type="radio" name="options" id="option1"><span class="glyphicon glyphicon-eye-open"></span> Public
+						</label>
+						<label class="btn btn-default <?php	if ( !$user->isPublicEmail() ) print 'active'; ?>">
+							<input type="radio" name="options" id="option2"><span class="glyphicon glyphicon-eye-close"></span> Private
+						</label>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							Picture:<br>
+							<input type="file" name="picture" id="picture">	
+						</div>
+
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							
+						</div>
+					</div>
 				</form>
 			</div>
 			<div class="modal-footer">

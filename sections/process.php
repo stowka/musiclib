@@ -35,7 +35,7 @@
 		$email = addslashes( htmlspecialchars( $_POST['email'] ) );
 		$passwd = addslashes( htmlspecialchars( $_POST['password'] ) );
 		User::create( $user, $email, $passwd );
-		$_SESSION['user'] = new User(User::login( $user, $passwd ));
+		$_SESSION['user'] = new User( User::login( $user, $passwd ) );
 		$_SESSION['online'] = true;
 		$signedIn = true;
 	endif;
@@ -69,7 +69,6 @@
 	/**
 	 * @author Jérôme Boesch
 	 * 
-	 * @todo accents, no result
 	 */
 	if ( isset($_GET['q']) && (!empty( $_GET['q'])) ):
 		$db = $_SESSION['db'];
