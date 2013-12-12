@@ -421,3 +421,8 @@ blockquote{
 blockquote>p {
 	font-size:1em;
 }
+
+select.form-control.alternate {
+ 	font-size: 1.2em;
+ 	padding: 5px;
+}
