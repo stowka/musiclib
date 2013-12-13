@@ -57,7 +57,7 @@
 												<button type="button" class="btn btn-default btn-lg btn-block" onclick="$('#form-add-artist').submit();">Submit</button>
 												<?php
 													if (isset($_POST['nameArtist']) && isset($_POST['biography']) && isset($_POST['pictureArtist']) )
-														Artist::create( $_POST['nameArtist'], $_POST['biography'], user->getId(), $_POST['pictureArtist'] );
+														Artist::create( $_POST['nameArtist'], $_POST['biography'], $user->getId(), $_POST['pictureArtist'] );
 												?>
 											</div>
 										</div>
