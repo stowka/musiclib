@@ -44,7 +44,7 @@
 			$stmt->execute( array(
 				$id
 			) );
-			$reason = $stmt->fetch(PDO::FETCH_NUM)
+			$reason = $stmt->fetch(PDO::FETCH_NUM);
 			$stmt->closeCursor();
 			return $reason[0];
 		}
@@ -55,7 +55,7 @@
 			$stmt = $db->prepare( "select id from reason" );
 			$stmt->execute();
 			while ( $reason = $stmt->fetch(PDO::FETCH_NUM) )
-				$reasons[] = new Reason( $reason[0] )
+				$reasons[] = new Reason( $reason[0] );
 			$stmt->closeCursor();
 			return $reasons;
 		}

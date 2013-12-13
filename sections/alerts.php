@@ -1,5 +1,5 @@
 <?php
-	if ( $loggedIn ):
+	if ( $_SESSION['loggedIn'] ):
 ?>
 		<div class="row">
 			<div class="col-md-12">
@@ -11,11 +11,12 @@
 			</div>
 		</div>
 <?php
+		unset( $_SESSION['loggedIn'] );
 	endif;
 ?>
 
 <?php
-	if ( $signedIn ):
+	if ( $_SESSION['signedIn'] ):
 ?>
 		<div class="row">
 			<div class="col-md-12">
@@ -27,11 +28,12 @@
 			</div>
 		</div>
 <?php
+		unset( $_SESSION['signedIn'] );
 	endif;
 ?>
 
 <?php
-	if ( $commentPosted ):
+	if ( $_SESSION['commentPosted'] ):
 ?>
 		<div class="row">
 			<div class="col-md-12">
@@ -42,6 +44,23 @@
 			</div>
 		</div>
 <?php
+		unset( $_SESSION['commentPosted'] );
+	endif;
+?>
+
+<?php
+	if ( $_SESSION['messageSent'] ):
+?>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="alert alert-success">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Your message has been successfully sent!</strong><br>
+				</div>
+			</div>
+		</div>
+<?php
+		unset( $_SESSION['messageSent'] );
 	endif;
 ?>
 

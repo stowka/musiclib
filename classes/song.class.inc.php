@@ -101,7 +101,7 @@
 
 		public function getComments() {
 			$comments = array();
-			$stmt = $this->db->prepare( "select user from `comment` where song = ?" );
+			$stmt = $this->db->prepare( "select user from `comment` where song = ?;" );
 			$stmt->execute( array(
 				$this->id
 			) );
@@ -164,7 +164,7 @@
 		}
 
 		public function getAverage() {
-			$stmt = $this->db->prepare( "select round(avg(grade), 3) from rate where song = ?;" );
+			$stmt = $this->db->prepare( "select round(avg(grade), 2) from rate where song = ?;" );
 			$stmt->execute( array(
 				$this->id
 			) );
@@ -181,6 +181,28 @@
 			$average = $stmt->fetch(PDO::FETCH_NUM);
 			$stmt->closeCursor();
 			return $average[0];
+		}
+
+		public function isRatedBy( $user ) {
+			$stmt = $this->db->prepare( "select count(*) from rate where user = ? and song = ?;" );
+			$stmt->execute( array(
+				$user,
+				$this->id
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $count[0];
+		}
+
+		public function gradeBy( $user ) {
+			$stmt = $this->db->prepare( "select grade from rate where user = ? and song = ?;" );
+			$stmt->execute( array(
+				$user,
+				$this->id
+			) );
+			$grade = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $grade[0];
 		}
 
 		/*

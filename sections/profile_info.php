@@ -26,8 +26,7 @@
 	</p>
 
 	<p class="padded">
-		<a class="btn btn-info btn-block" href="add" disabled>Add artist</a>
-		<a class="btn btn-info btn-block" href="add" disabled>Add album</a>
+		<a class="btn btn-info btn-block" href="add">New artist / album</a>
 	</p>
 	<hr>
 	<p class="padded">
@@ -35,6 +34,7 @@
 		<button class="btn btn-danger btn-block">Delete account</button>
 	</p>
 </div>
+<div class="padded"></div>
 
 <!-- Message admin -->
 <div class="modal fade" id="message-admin" tabindex="-1" role="dialog" aria-hidden="true">
@@ -49,6 +49,13 @@
 			<div class="modal-body">
 				<form id="form-message-admin" action="" method="post">
 					<input type="hidden" name="message-admin">
+					<select name="reason" class="form-control">
+						<?php
+							foreach( Reason::all() as $reason ):
+								print '<option value="' . $reason->getId() . '">' . $reason->getReason() . '</option>';
+							endforeach;
+						?>
+					</select><br>
 					<textarea class="form-control" name="text" placeholder="Write here the message you want to send to the administrator."></textarea>
 				</form>
 			</div>

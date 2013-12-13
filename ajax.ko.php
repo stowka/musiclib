@@ -21,6 +21,12 @@
 				$stmt = $db->prepare( "update know set owned = 0 where user = :user and song = :song;" );
 			else:
 				$stmt = $db->prepare( "delete from know where user = :user and song = :song;" );
+				$stmt2 = $db->prepare( "delete from rate where user = :user and song = :song;" );
+				$stmt2->execute( array(
+					"user" => $id_user,
+					"song" => $id_song
+				) );
+				$stmt2->closeCursor();
 			endif;
 		else:
 			if ( $owned ) :

@@ -36,6 +36,10 @@
 					<?php
 						require_once "sections/user_info.php";
 					?>
+
+					<?php
+						require_once "sections/user_matched_users.php";
+					?>
 				</div>
 
 				<div class="col-md-8">

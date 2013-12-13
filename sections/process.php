@@ -1,13 +1,14 @@
 <?php
 	# Status variables
-	$loggedIn = false;
-	$signedIn = false;
-	$commentPosted = false;
-	$commentUpdated = false;
-	$commentDeleted = false;
-	$gradeGiven = false;
-	$gradeUpdated = false;
-	$gradeDeleted = false;
+	$_SESSION['loggedIn'] = false;
+	$_SESSION['signedIn'] = false;
+	$_SESSION['commentPosted'] = false;
+	$_SESSION['commentUpdated'] = false;
+	$_SESSION['commentDeleted'] = false;
+	$_SESSION['gradeGiven'] = false;
+	$_SESSION['gradeUpdated'] = false;
+	$_SESSION['gradeDeleted'] = false;
+	$_SESSION['messageSent'] = false;
 
 	# Process log in
 	if ( isset( $_POST['login'] ) 
@@ -18,7 +19,7 @@
 		$passwd = addslashes( htmlspecialchars( $_POST['password'] ) );
 		$_SESSION['user'] = new User(User::login( $user, $passwd ));
 		$_SESSION['online'] = true;
-		$loggedIn = true;
+		$_SESSION['loggedIn'] = true;
 	endif;
 
 	# Process log out
@@ -42,7 +43,7 @@
 		User::create( $user, $email, $passwd );
 		$_SESSION['user'] = new User( User::login( $user, $passwd ) );
 		$_SESSION['online'] = true;
-		$signedIn = true;
+		$_SESSION['signedIn'] = true;
 	endif;
 
 	# Process comment
@@ -67,7 +68,7 @@
 			"text" => $text
 		) );
 		$stmt->closeCursor();
-		$commented = true;
+		$_SESSION['commented'] = true;
 	endif;
 
 	# Process regular search
@@ -142,12 +143,13 @@
 	if( isset( $_POST['text'] ) && isset( $_POST['reason'] ) && !empty( $_POST['text'] ) 
 		&& isset( $_SESSION['online'] ) && $_SESSION['online'] 
 		&& is_numeric( $_POST['reason'] ) && Reason::exists( $_POST['reason'] ) ):
-
-		$user = $user->getId();
+		$db = $_SESSION['db'];
+	
+		$user = $_SESSION['user']->getId();
 		$reason = $_POST['reason'];
 		$text = $_POST['text'];
 
-		$stmt->prepare( "insert into message (user, text, date, reason) values (:user, :text, unix_timestamp(), :reason);" );
+		$stmt = $db->prepare( "insert into message (user, text, date, reason) values (:user, :text, unix_timestamp(), :reason);" );
 		$stmt->execute( array(
 			':user' => $user,
 			':text' => $text,
@@ -155,4 +157,5 @@
 		) );
 
 		$stmt->closeCursor();
+		$_SESSION['messageSent'] = true;
 	endif;

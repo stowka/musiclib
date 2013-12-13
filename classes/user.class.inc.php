@@ -50,22 +50,26 @@
 									inner join user u 
 									on u.id = r.user 
 									where r.user <> ? 
-									and u.active = :user 
+									and r.grade > 5 
+									and u.active = 1
 									and song 
 									in (
 									select song 
 									from rate 
-									where user = :user
-									and grade > 12) 
+									where user = ?
+									and grade > 5) 
 									group by r.user 
 									order by ratingCount desc 
 									limit 0, ?;" );
-			$stmt->bindParam(1, $number, PDO::PARAM_INT);
-			$stmt->execute( array(
-				$this->id;
-			) );
+			$stmt->bindParam(1, $this->id, PDO::PARAM_INT);
+			$stmt->bindParam(2, $this->id, PDO::PARAM_INT);
+			$stmt->bindParam(3, $number, PDO::PARAM_INT);
+			$stmt->execute();
 			while( $matchedUser = $stmt->fetch( PDO::FETCH_ASSOC) )  :
-				$matchedUsers[] = new User( $matchedUser['user'] );
+				$matchedUsers[] = array(
+					"user" => new User( $matchedUser['user'] ),
+					"ratingCount" => $matchedUser['ratingCount']
+				);
 			endwhile;
 			$stmt->closeCursor();
 			return $matchedUsers;
@@ -531,8 +535,8 @@
 			|| self::checkEmail( $email ) )
 			&& self::validateEmail( $email )  
 			|| die( "Error: Username or email already exists." );
-			$stmt = $db->prepare( "insert into user (username, email, password, picture) 
-								values (:username, :email, sha1(:password), :picture);" );
+			$stmt = $db->prepare( "insert into user (username, email, password, picture, active) 
+								values (:username, :email, sha1(:password), :picture, 1);" );
 			$stmt->execute( array(
 				"username" => $username,
 				"email" => $email,
