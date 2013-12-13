@@ -49,19 +49,21 @@
 									from rate r 
 									inner join user u 
 									on u.id = r.user 
-									where r.user <> 1 
-									and u.active = 1 
+									where r.user <> ? 
+									and u.active = :user 
 									and song 
 									in (
 									select song 
 									from rate 
-									where user = 1
+									where user = :user
 									and grade > 12) 
 									group by r.user 
 									order by ratingCount desc 
 									limit 0, ?;" );
 			$stmt->bindParam(1, $number, PDO::PARAM_INT);
-			$stmt->execute();
+			$stmt->execute( array(
+				$this->id;
+			) );
 			while( $matchedUser = $stmt->fetch( PDO::FETCH_ASSOC) )  :
 				$matchedUsers[] = new User( $matchedUser['user'] );
 			endwhile;
