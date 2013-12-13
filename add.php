@@ -17,7 +17,7 @@
 		<?php require_once "sections/menu.php"; ?>
 		<section class="container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-12">
 					<ul class="nav nav-tabs" id="myTab">
 						<li class="active nephritis">
 							<a href="#artists" data-toggle="tab">Add artist</a>
@@ -65,24 +65,18 @@
 								</form>
 							</div>
 							<div class="tab-pane carrot" id="albums">
-								<form>
+								<form id="form-add-album" action="" method="post">
 									<fieldset>
 										<p class="padded"></p>
 										<div class="row">
-											<div class="col-md-7">
+											<div class="col-md-8">
 												<input type="text" name="nameAlbum" placeholder="Name">
 											</div>
-											<div class="col-md-2">
-												<input type="text" name="disc" placeholder="N° Disc" style="font-size: 1.1em; min-height: 39px;">
+											<div class="col-md-1">
+												<input type="text" name="disc" placeholder="Disc">
 											</div>
 											<div class="col-md-3">
-												<input type="text" name="releaseDate" placeholder="Release Date" style="font-size: 1.1em; min-height: 39px;">
-											</div>
-										</div>
-										<br><br>
-										<div class="row">
-	 										<div class="col-md-4">
-												<select class="form-control alternate" id="listType" name="type" placeholder="type">
+												<select class="form-control alternate" id="listType" name="type" style="min-height: 40px;">
 													<option>Single</option>
 													<option>Album</option>
 													<option>Live</option>
@@ -93,8 +87,19 @@
 													<option>pyqgj</option>
 												</select>
 											</div>
-											<div class="col-md-4 col-md-offset-2">
+										</div>
+										<br><br>
+										<div class="row">
+	 										<div class="col-md-2">
+												<input type="text" name="releaseDate" placeholder="Release Date">
+											</div>
+											<div class="col-md-4">
+												<input type="text" name="albumByArtist" id="albumByArtist" placeholder="Artist who release this album">
+												<!--remplissage automatique-->
+											</div>
+											<div class="col-md-3 col-md-offset-1">
 												<h4>Number of songs</h4>
+												<input type="text" name="nbSong" id="nbSong" hidden>
 											</div>
 											<div class="col-md-1">
 												<button type="button" class="btn btn-default" onclick="moreSong()">+</button>
@@ -107,24 +112,28 @@
 										<div id="songsList">
 										<?php
 											print '<div class="row">';
-												print '<div class="col-md-4">';
-													print '<div class="row">';
-														print '<div class="col-md-1">';
-															print '1';
-														print '</div>';
-														print '<div class="col-md-10">';
-															print '<input type="text" name="duration" placeholder="Duration">';
-														print '</div>';
-													print '</div>';
-													print '<br><span style="font-size:1em;"></span>';
-													print '<div class="row">';
-														print '<div class="col-md-12">';
-															print '<input type="text" name="title" placeholder="Title">';
-														print '</div>';
-													print '</div>';
+												print '<div class="col-md-1">';
+													print '<h1>1</h1>';
 												print '</div>';
-												print '<div class="col-md-8">';
-													print '<textarea rows="4" name="lyrics" placeholder="Lyrics"></textarea>';
+												print '<div class="col-md-2">';
+													print '<input type="text" name="duration" placeholder="Duration">';
+												print '</div>';
+												print '<div class="col-md-9">';
+													print '<input type="text" name="title" placeholder="Title">';
+												print '</div>';
+											print '</div>';
+											print '<div class="row">';
+												print '<div class="col-md-4 col-md-offset-1">';
+													print '<input type="text" name="songComposeBy" placeholder="Song compose by">';
+												print '</div>';
+												print '<div class="col-md-4">';
+													print '<input type="text" name="songPerformBy" placeholder="Song perform by">';
+												print '</div>';
+												print '<div class="col-md-3">';
+													print '<select class="form-control alternate" id="listGenre" name="genre" style="min-height:40px;">';
+														print '<option>Rock</option>';
+														print '<option>Pop</option>';
+													print '</select>';
 												print '</div>';
 											print '</div>';
 										?>
@@ -137,7 +146,26 @@
 												</p>
 											</div>
 											<div class="col-md-3">
-												<button type="button" class="btn btn-default btn-lg btn-block">Submit</button>
+												<button type="button" class="btn btn-default btn-lg btn-block" onclick="$('#form-add-album').submit();">Submit</button>
+												<?php
+													// if( isset($_POST['nameAlbum']) && isset($_POST['disc']) && isset($_POST['releaseDate']) && isset($_POST['type']) && isset($_POST['albumByArtist']) ){
+													// 	Album::create( $_POST['nameAlbum'], $_POST['disc'], $_POST['releaseDate'], '', $user->getId(), $_POST['type'] );
+													// 	//Ajout relation release (artist-album)
+													// }
+													
+
+													// $z ='';
+													// if( isset($_POST['nbSong']) ){
+													// 	$nbSong = $_POST['nbSong'];
+													// 	while( $z < $nbSong ){
+													// 		//Ajout de include (album-song-track)
+													// 		//Ajout de la relation belong (song-genre)
+													// 		//Ajout de la relation compose (artist-song)
+													// 		//Ajout de la relation perform (artist-song)
+													// 		z++;
+													// 	}
+													// }
+												?>
 											</div>
 										</div>
 									</fieldset>
@@ -145,14 +173,6 @@
 							</div>
 						</div><!--tab-->
 					</div><!--class-->
-				</div><!--.span-->
-				<div class="col-md-5">
-					<div class="alizarin" id="users2">
-						<p class="lead padded">
-							Affiche une image
-						</p>
-						<hr>
-					</div>
 				</div><!--.span-->
 			</div><!-- .row -->
 		</section>
@@ -177,6 +197,10 @@
 				document.getElementById("songsAdded"+nbSong).style.display = "none";	
 				nbSong--;
 			}
+			function countNbSong(){
+				document.getElementById("nbSong").value = nbSong;
+			}
+			//Fonction JS comptant le nombre de div class="songsX"
 		</script>
 	</body>
 </html>
