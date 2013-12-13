@@ -63,12 +63,25 @@
 
 		public static function userKnowsSong($user, $song){
 			$db = $_SESSION['db'];
-			$stmt = $db->prepare( "" );
+			$stmt = $db->prepare( "select count(*) from know where user = :user and song = :song;" );
 			$stmt->execute( array(
-				$this->id
+				"user" => $user,
+				"song" => $song
 			) );
-			$average = $stmt->fetch(PDO::FETCH_NUM);
+			$know = $stmt->fetch(PDO::FETCH_NUM);
 			$stmt->closeCursor();
-			return $average[0];
+			return $know[0];
+		} 
+
+		public static function userOwnsSong($user, $song){
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare( "select count(*) from know where user = :user and song = :song and owned = 1;" );
+			$stmt->execute( array(
+				"user" => $user,
+				"song" => $song
+			) );
+			$know = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $know[0];
 		} 
 	}
