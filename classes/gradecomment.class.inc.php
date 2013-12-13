@@ -3,8 +3,8 @@
 	/*
 	 * @author Jérôme Boesch
 	 *
-	 * Class GradeComment: modelises the relation between a user and a comment
-	 * 
+	 * Class GradeComment: modelises the relation 
+	 * 					   between a user and a comment
 	 */
 
 	class GradeComment {
@@ -16,7 +16,7 @@
 		private $songComment;
 
 		public function __construct($user, $userComment, $songComment) {
-			($user && $userComment && $songComment ) || die (	"Error: Wrong grade comment ");
+			($user && $userComment && $songComment ) || die ("Error: Wrong grade comment ");
 			$this->db = $_SESSION['db'];
 			$this->fetchData( $user, $userComment, $songComment );
 
@@ -46,18 +46,20 @@
 
 		public function agree( $userComment, $songComment, $user ) {
 			$db = $_SESSION['db'];
-			$stmt = $this->db->prepare("update gradeComment set agreement = 1 where comment = ? and user = ?");
+			$stmt = $this->db->prepare("update gradeComment set agreement = 1 where userComment = ? and songComment = ? and user = ?");
 			$stmt->execute( array(
-				$userComment, $songComment,
+				$userComment, 
+				$songComment,
 				$user
 			) );
 		}
 
 		public function disagree( $userComment, $songComment, $user ) {
 			$db = $_SESSION['db'];
-			$stmt = $this->db->prepare("update gradeComment set agreement = 0 where comment = ? and user = ?");
+			$stmt = $this->db->prepare("update gradeComment set agreement = 0 where userComment = ? and songComment = ? and user = ?");
 			$stmt->execute( array(
-				$userComment, $songComment,
+				$userComment,
+				$songComment,
 				$user
 			) );
 
@@ -70,10 +72,11 @@
 
 		public static function create( $user, $userComment, $songComment, $agreement ) {
 			$db = $_SESSION['db'];
-			$stmt = $this->db->prepare("select count(*) from gradeComment where user = ? and comment = ?");
+			$stmt = $this->db->prepare("select count(*) from gradeComment where user = ? and userComment = ? and songComment = ?");
 			$stmt->execute( array(
 				$user,
-				$userComment, $songComment
+				$userComment,
+				$songComment
 			) );
 			$count = $stmt->fetch(PDO::FETCH_NUM);
 			$count = $count[0];
@@ -81,10 +84,11 @@
 
 
 			if ( !$count ): 
-			$stmt = $this->db->prepare("insert into gradeComment (user, comment, agreement) values (?, ?, ?)");
+			$stmt = $this->db->prepare("insert into gradeComment (user, userComment, songComment, agreement) values (?, ?, ?, ?)");
 			$stmt->execute( array(
 				$user,
-				$userComment, $songComment,
+				$userComment, 
+				$songComment,
 				$agreement
 			) );
 			return new GradeComment($user, $userComment, $songComment);
@@ -114,6 +118,5 @@
 		}
 
 	}
-
 
 ?>
