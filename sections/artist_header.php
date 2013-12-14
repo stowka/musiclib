@@ -1,6 +1,6 @@
 <div class="belize-hole">
         <p style="display:inline;">
-        <img src="img/artists/<?php print $artist->getPicture(); ?>" width="300px" style="margin-right:20px;">
+                <img src="img/artists/<?php print $artist->getPicture(); ?>" width="300px" style="margin-right:20px;">
         </p>
         <h1 style="display:inline-block; vertical-align:middle">
                 <?php print $artist; ?><br>

@@ -56,8 +56,8 @@
 						<div class="slider slider-horizontal" id="average_slider"></div>
 					</div>
 				</h3>
-				<input type="hidden" id="rate_value" name="rate_value" value="">
-				<input type="hidden" id="average_value" name="average_value" value="">
+				<input type="hidden" id="rate_value" name="rate_value" value="<?php print $song->isRatedBy( $user->getId() ) ? $song->gradeBy( $user->getId() ) : ''; ?>">
+				<input type="hidden" id="average_value" name="average_value" value="<?php print (float)$song->getAverage(); ?>">
     		</div>
 	        
 		</div>

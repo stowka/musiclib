@@ -5,5 +5,5 @@
 <!-- CSS END -->
 
 <!-- FAVICON BEGIN -->
-<link rel="icon" type="image/png" href="./img/logos/logo.png">
+<link rel="icon" type="image/png" href="./img/logos/favicon.png">
 <!-- FAVICON END -->

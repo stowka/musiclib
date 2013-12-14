@@ -16,3 +16,12 @@ Envoyer mail reset password
 Preparer toutes les requetes dans toutes les classes
 Add artist, album (+ songs) - Alexis
 
+
+---
+Errors:
+	song.php:
+		onload if user grade = 10
+			2 user grade slider handles
+		onload
+			2 average slider handles
+

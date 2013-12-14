@@ -20,7 +20,9 @@
 			</p>
 			<div class="row">
 				<div class="col-md-12">
-					<img src="./img/artists/<?php print $top_artist->getPicture(); ?>" width="100%">
+					<div class="image-cropper">
+						<img src="./img/artists/<?php print $top_artist->getPicture(); ?>" width="100%" class="centered">
+					</div>
 				</div>
 			</div>
 		</p>

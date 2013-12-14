@@ -426,3 +426,15 @@ select.form-control.alternate {
  	font-size: 1.2em;
  	padding: 5px;
 }
+
+.image-cropper {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  border: 0px rgba(0, 0, 0, 0) solid;
+}
+
+.centered {
+  position: absolute;
+}

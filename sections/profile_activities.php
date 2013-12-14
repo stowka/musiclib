@@ -1,5 +1,5 @@
 <?php
-	foreach ( Activity::lastActivities( $user->getId(), 10 ) as $activity ) :
+	foreach ( Activity::lastActivities( $user->getId() ) as $activity ) :
 		if ( $activity instanceof Rate ) :
 ?>
 			<div class="pomegranate">

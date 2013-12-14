@@ -32,11 +32,10 @@
 									print '<h4 class="padded">';
 									print $c.'. <a href="'.$song->getUrl().'">';
 									print $song . '</a></h4><h5 class="padded"> by <a href="'. $song->getMainArtist()->getUrl() . '" >' .$song->getMainArtist(). '</a></h5>' ;
-									print '<img src="'. $song->getMainAlbum()->getArtwork() . '" width="100%">';
+									print '<div class="image-cropper"><img src="'. $song->getMainAlbum()->getArtwork() . '" width="100%" class="centered"></div>';
 									print '<hr>';
 									$c++;
 								endforeach;
-								$c=1;
 							?>		
 						</p>
 					</div>
@@ -54,11 +53,10 @@
 									print '<h4 class="padded">';
 									print $c.'. <a href="'.$artist->getUrl().'">';
 									print $artist . '</a></h4><h5 class="padded"><br></h5>';
-									print '<img src="img/artists/'. $artist->getPicture() . '" width="100%">';
+									print '<div class="image-cropper"><img src="img/artists/'. $artist->getPicture() . '" width="100%" class="centered"></div>';
 									print '<hr>';
 									$c++;
 								endforeach;
-								$c=1;
 							?>
 						</p>
 
@@ -77,11 +75,10 @@
 									print '<h4 class="padded">';
 									print $c.'. <a href="'.$album->getUrl().'">';
 									print $album . '</a></h4><h5 class="padded"> by <a href="'. $album->getMainArtist()->getUrl() . '" >' .$album->getMainArtist(). '</a></h5>' ;
-									print '<img src="'. $album->getArtwork() . '" width="100%">';
+									print '<div class="image-cropper"><img src="'. $album->getArtwork() . '" width="100%" class="centered"></div>';
 									print '<hr>';
 									$c++;
 								endforeach;
-								$c=1;
 							?>
 						</p>
 					</div>
