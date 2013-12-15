@@ -25,4 +25,13 @@ Errors:
 		onload
 			2 average slider handles
 	
+Add album:
+	passer en form en post
+	passer champs en required
+	tester si le nom de l'album n'existe pas
+	
+
+Recherche:
+	ajax gérer les accents
+
 

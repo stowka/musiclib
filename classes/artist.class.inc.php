@@ -217,10 +217,10 @@
 			return $artists;
 		}
 
-		public static function create( $name, $biography, $user, $picture = "" ) {
+		public static function create( $name, $biography, $user, $picture ) {
 			$db = $_SESSION['db'];
-			$name = addslashes( htmlspecialchars( $name ) );
-			$biography = addslashes( htmlspecialchars( $biography ) );
+			$name = $name;
+			$biography = $biography;
 			$stmt = $db->prepare( "insert into artist 
 								(name, biography, uploadDate, uploadUser, picture) 
 								values (:name, :biography, unix_timestamp(), :user, :picture)");
@@ -231,7 +231,8 @@
 				"picture" => $picture
 			) );
 			$stmt->closeCursor();
-			print "Artist created:".$username; /* For testing purpose only */
+			return $db->lastInsertId();
+			/*print "Artist created:".$username; /* For testing purpose only */
 		}
 
 		public static function delete( $id ) {
