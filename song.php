@@ -15,7 +15,7 @@
 	</head>
 
 
-	<body>
+	<body onload="javascript:displaySliders();">
 		<?php require_once "sections/menu.php"; ?>
 
 		<section class="container">

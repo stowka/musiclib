@@ -70,10 +70,11 @@
 
 		public static function create( $user, $userComment, $songComment, $agreement ) {
 			$db = $_SESSION['db'];
-			$stmt = $this->db->prepare("select count(*) from gradeComment where user = ? and comment = ?");
+			$stmt = $db->prepare("select count(*) from gradeComment where user = ? and comment = ?");
 			$stmt->execute( array(
 				$user,
-				$userComment, $songComment
+				$userComment, 
+				$songComment
 			) );
 			$count = $stmt->fetch(PDO::FETCH_NUM);
 			$count = $count[0];
@@ -91,6 +92,33 @@
 			endif;
 			return false;
 		}
+
+		public static function countAgreeByComment( $userComment, $songComment ){
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from gradeComment where songComment = :songComment and userComment = :userComment and agreement = 1;");
+			$stmt->execute(array(
+				"userComment" => $userComment,
+				"songComment" => $songComment
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+			return $count;
+		}
+
+		public static function countDisagreeByComment( $userComment, $songComment ){
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from gradeComment where songComment = :songComment and userComment = :userComment and agreement = 0;");
+			$stmt->execute(array(
+				"userComment" => $userComment,
+				"songComment" => $songComment
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+			return $count;
+		}
+
 
 		/*
 		 * GETTERS

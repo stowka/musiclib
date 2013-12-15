@@ -1,5 +1,6 @@
 <?php
 	require_once "config/config.inc";
+	isset($_GET['q']) && empty( $_GET['q']) && Page::go404();
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +29,6 @@
 									print '<a href="'.$song->getUrl().'">';
 									print $song . "</a><br>";
 								endforeach;
-
 							?>
 						</p>
 					</div>

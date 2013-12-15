@@ -55,9 +55,9 @@
 				endif;
 			?>
 
-			<form class="navbar-form navbar-right" role="search" action="result.php" method="get">
+			<form class="navbar-form navbar-right" role="search" action="result.php" method="get" id="form-search">
 				<div class="form-group">
-					<input type="search" name="q" class="form-control" placeholder="Search music" value="<?php if ( isset( $_GET['q'] ) ) print $_GET['q']; ?>" required>
+					<input type="search" name="q" id="search" class="form-control" placeholder="Music search" data-provide="typeahead" autocomplete="off" value="<?php if ( isset( $_GET['q'] ) ) print $_GET['q']; ?>" required>
 				</div>
 				<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 			</form>
