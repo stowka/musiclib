@@ -1,7 +1,7 @@
 <div class="belize-hole">
-	<div class="row" style="height:300px">
+	<div class="row">
 		<div class="col-md-6">
-			<h1 class="padded"  style="margin: 50px;">
+			<h2 class="padded"  style="margin: 50px;">
 				<?php print $song ?> <br>
 				<small class="text-clouds">
 					by <a href="<?php print $song->getMainArtist()->getUrl(); ?>"><?php print $song->getMainArtist(); ?></a>
@@ -18,10 +18,10 @@
 					 		$count++;
 					 	} ?> 
 				</small><br>
-				<small class="text-clouds">
+				<small class="text-clouds hidden">
 					Duration: <?php print $song->getDuration( 'i \m\i\n s \s\e\c' ); ?> 
 				</small>
-			</h1>
+			</h2>
 		</div>
 <?php
 	if(isset($_SESSION['online']) && $_SESSION['online']):

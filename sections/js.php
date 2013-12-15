@@ -15,6 +15,7 @@
 <script type="text/javascript" src="./js/add.js"></script>
 <script type="text/javascript" src="./js/rate.js"></script>
 <script type="text/javascript">
+	$('a').tooltip();
 	var artists_search, albums_search, songs_search, users_search, items;
 	
 	$.post(

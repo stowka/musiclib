@@ -1,8 +1,8 @@
 <div class="belize-hole">
 	<p  style="display:inline;">
-	<img src="<?php print $album->getArtwork(); ?>" height="300px" style="margin-right:20px;">
+		<img src="<?php print $album->getArtwork(); ?>" height="300px" style="margin-right:20px;">
 	</p>
-	<h1 style="display:inline-block; vertical-align:middle">
+	<h2 style="display:inline-block; vertical-align:middle">
 		<small class="text-clouds">
 		<?php print $album->getReleaseDate()->format("jS F Y"); ?><br>
 		</small>
@@ -36,12 +36,12 @@
 		?>		
 		</small>
 
-	</h1>
-	<div class="btn-group btn-group-lg pull-right">
-		<button class="btn btn-success" type="button" title="Right informations">
+	</h2>
+	<div class="btn-group btn-group-lg pull-right hidden">
+		<button class="btn btn-success btn-sm" type="button" title="Right informations">
 			 <span class="glyphicon glyphicon-ok"> 0 </span>
 		</button>
-		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button" title="Wrong informations">
+		<button class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown" type="button" title="Wrong informations">
 			 <span class="glyphicon glyphicon-ban-circle"> 0 </span>
 			 <span class="caret"></span>
 		</button>	

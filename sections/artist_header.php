@@ -2,7 +2,7 @@
         <p style="display:inline;">
                 <img src="img/artists/<?php print $artist->getPicture(); ?>" width="300px" style="margin-right:20px;">
         </p>
-        <h1 style="display:inline-block; vertical-align:middle">
+        <h2 style="display:inline-block; vertical-align:middle">
                 <?php print $artist; ?><br>
                 <small class="text-clouds">
                                 <?php 
@@ -19,8 +19,8 @@
 
                 ?>      
                 </small>
-        </h1>
-        <div class="btn-group btn-group-lg pull-right">
+        </h2>
+        <div class="btn-group btn-group-lg pull-right hidden">
                 <button class="btn btn-success" type="button" title="Right informations">
                          <span class="glyphicon glyphicon-ok"> 0 </span>
                 </button>

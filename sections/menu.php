@@ -27,7 +27,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./img/users/<?php print $user->getPicture(); ?>" width="20px"> <?php print $user->getUsername(); ?> <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="profile">Profile</a></li>
-								<!-- <li><a href="add">Add</a></li> -->
+								<li><a href="add">New artist / album</a></li>
 								<!-- <li><a href="search">Advanced search</a></li> -->
 								<li class="divider"></li>
 								<li><a href="#" onclick="javascript:$('#logout').submit();">Log out</a></li>

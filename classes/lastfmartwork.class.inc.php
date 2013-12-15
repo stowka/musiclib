@@ -20,7 +20,7 @@
 
 			/* Image to display if no artwork was found */
 			if(!$xml) {
-				return 'http://localhost/noartwork.jpg';
+				return 'img/albums/noartwork.png';
 			}
 
 			/* Open the XML file and go through to find the bits we want */

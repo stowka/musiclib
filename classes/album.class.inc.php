@@ -88,7 +88,9 @@
 			$artist = $stmt->fetch(PDO::FETCH_NUM);
 			$artist = $artist[0];
 			$stmt->closeCursor();
-			return LastFMArtwork::getArtwork( utf8_encode( $artist ), utf8_encode( $this->name ), true, $size );
+			$artist = strtr( $artist, array('.' => '', ',' => '') );
+			$album = strtr( $this->name, array('.' => '', ',' => '') );
+			return LastFMArtwork::getArtwork( utf8_encode( $artist ), utf8_encode( $album ), true, $size );
 		}
 
 		public function getMainArtist() {

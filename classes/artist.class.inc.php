@@ -70,7 +70,7 @@
 		}
 
 		public function getBiography() {
-			return nl2br( utf8_encode( $this->biography ) );
+			return preg_replace( "/<br \/>/", "<br><br>", nl2br( utf8_encode( $this->biography ) ) );
 		}
 
 		public function getReleaseDate( $format = "" ) {
@@ -95,7 +95,7 @@
 
 		public function getAlbums() {
 			$albums = array();
-			$stmt = $this->db->prepare( "select r.album from `release` r where r.artist = ?;" );
+			$stmt = $this->db->prepare( "select r.album from `release` r inner join album a on r.album = a.id where r.artist = ? order by a.releaseDate desc;" );
 			$stmt->execute( array(
 				$this->id
 			) );

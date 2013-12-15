@@ -15,8 +15,8 @@
 				<div class="progress-bar silver" role="progressbar" aria-valuenow="<?php print (int)($top_song->getAverage() * 10); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php print (int)($top_song->getAverage() * 10); ?>%"></div>
 			</div>
 			<p class="padded">
-				<a href="<?php print $top_song->getUrl(); ?>"><?php print $top_song->getTitle(); ?></a><br>
-				<small>by <a href="<?php print$top_song->getMainArtist()->getUrl(); ?>"><?php print $top_song->getMainArtist(); ?></a></small><br>
+				<a href="<?php print $top_song->getUrl(); ?>" data-toggle="tooltip" title="<?php print $top_song->getTitle(); ?>"><?php print truncateTextByChars( $top_song->getTitle() ); ?></a><br>
+				<small>by <a href="<?php print$top_song->getMainArtist()->getUrl(); ?>" data-toggle="tooltip" title="<?php print $top_song->getMainArtist(); ?>"><?php print truncateTextByChars( $top_song->getMainArtist() ); ?></a></small><br>
 			</p>
 			<div class="row">
 				<div class="col-md-12">

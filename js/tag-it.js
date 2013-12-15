@@ -66,7 +66,7 @@
 
             // This is just used when preloading data from the field, and for
             // populating the field with delimited tags as the user adds them.
-            singleFieldDelimiter: ',',
+            singleFieldDelimiter: '%@',
 
             // Set this to an input DOM node to use an existing form field.
             // Any text in it will be erased on init. But it will be

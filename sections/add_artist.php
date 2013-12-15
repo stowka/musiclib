@@ -18,6 +18,6 @@
 				</div>
 			</div>
 		</fieldset>
-		<button id="submit_artist" type="submit" class="btn btn-info btn-lg btn-block" onclick="$('#form-add-artist').submit();">Submit</button>
+		<button id="submit_artist" type="submit" class="btn btn-info btn-lg btn-block">Submit</button>
 	</form>
 </div>

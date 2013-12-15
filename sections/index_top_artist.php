@@ -15,7 +15,7 @@
 				<div class="progress-bar silver" role="progressbar" aria-valuenow="<?php print (int)($top_artist->getAverage() * 10); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php print (int)($top_artist->getAverage() * 10); ?>%"></div>
 			</div>
 			<p class="padded">
-				<a href="<?php print $top_artist->getUrl(); ?>"><?php print $top_artist; ?></a><br>
+				<a href="<?php print $top_artist->getUrl(); ?>" data-toggle="tooltip" title="<?php print $top_artist; ?>"><?php print truncateTextByChars( $top_artist ); ?></a><br>
 				<br>
 			</p>
 			<div class="row">

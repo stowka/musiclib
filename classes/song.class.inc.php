@@ -141,7 +141,7 @@
 
 		public function getMainAlbum() {
 			$stmt = $this->db->prepare( "select a.id from `include` i 
-										inner join artist a on a.id = i.album 
+										inner join album a on a.id = i.album 
 										where i.song = ? order by a.id limit 0, 1" );
 			$stmt->execute( array(
 				$this->id

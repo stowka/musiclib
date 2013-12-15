@@ -9,12 +9,12 @@
                 <th>
                     Title
                 </th>
-                <th  class="text-right">
+               <!--  <th  class="text-right">
                     Duration
                 </th>
                 <th  class="text-center">
                     Rate
-                </th>
+                </th> -->
                 <th class="text-right">
                     Average
                 </th>
@@ -31,14 +31,14 @@
 	            <td>
 	            	<a href="<?php print $song->getUrl(); ?>" ><?php print $song; ?></a>
 	            </td>
-	            <td  class="text-right">
-	            	<?php print $song->getDuration(); ?>
+	            <!-- <td  class="text-right">
+	            	<?php #print $song-getDuration(); ?>
 	            </td>
 				<td  class="text-center">
 	                <div class="slider slider-horizontal" id="rate" style="cursor:pointer; width:90%;"></div>
 					<span id="rateUser" class="padded"> Rate it now!</span>
 								
-	            </td>
+	            </td> -->
 				<td class="text-right">
 				<?php
 					if ($song->countRaters() > 0)
