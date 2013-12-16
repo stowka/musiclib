@@ -15,6 +15,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="./"><span class="glyphicon glyphicon-home"></span> Home</a></li>
 				<li><a href="./tops"><span class="glyphicon glyphicon-stats"></span> Tops</a></li>
+				<li><a href="./rand"><span class="glyphicon glyphicon-random"></span> Random song</a></li>
 			</ul>
 
 			<?php

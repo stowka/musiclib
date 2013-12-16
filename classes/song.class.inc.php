@@ -205,6 +205,22 @@
 			return $grade[0];
 		}
 
+		public function getYouTubeResults() {
+			return "http://www.youtube.com/results?search_query=" . urlencode( $this->getMainArtist() ) . '+' . urlencode( $this->getTitle() );
+		}
+
+		public function getDeezerResults() {
+			return "http://www.deezer.com/search/" . urlencode( $this->getMainArtist() ) . '+' . urlencode( $this->getTitle() );
+		}
+
+		// public function getItunesResults() {
+		// 	return "http://www.deezer.com/search/" . urlencode( $this->getMainArtist() ) . '+' . urlencode( $this->getTitle() );
+		// }
+
+		public function getAmazonResults() {
+			return "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" . urlencode( $this->getMainArtist() ) . '+' . urlencode( $this->getTitle() );
+		}
+
 		/*
 		 * ===
 		 * SETTERS
@@ -366,6 +382,18 @@
 								group by s.id
 								order by song_average desc
 								limit 0, ?;" );
+			$stmt->bindParam(1, $number, PDO::PARAM_INT);
+			$stmt->execute();
+			while ( $song = $stmt->fetch(PDO::FETCH_NUM) )
+				$songs[] = new Song( $song[0] );
+			$stmt->closeCursor();
+			return $songs;
+		}
+
+		public static function random( $number = 1 ) {
+			$db = $_SESSION['db'];
+			$songs = array();
+			$stmt = $db->prepare( "select id from song order by rand(), 1 limit 0, ?;" );
 			$stmt->bindParam(1, $number, PDO::PARAM_INT);
 			$stmt->execute();
 			while ( $song = $stmt->fetch(PDO::FETCH_NUM) )

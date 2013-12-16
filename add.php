@@ -26,6 +26,10 @@
 							<a href="#albums" data-toggle="tab"><h3 class="text-center">Add album</h3></a>
 						</li>
 					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
 					<div class="tab-content">
 						<div class="tab-pane nephritis" id="artists">
 							<?php

@@ -18,6 +18,10 @@
 					 		$count++;
 					 	} ?> 
 				</small><br>
+				<a href="<?php print $song->getYouTubeResults(); ?>" data-toggle="tooltip" title="Find on YouTube"><img src="img/logos/youtube.png" alt="YouTube" width="32px"></a> 
+				<a href="<?php print $song->getDeezerResults(); ?>" data-toggle="tooltip" title="Find on Deezer"><img src="img/logos/deezer.png" alt="Deezer" width="32px"></a> 
+				<a href="<?php print $song->getAmazonResults(); ?>" data-toggle="tooltip" title="Find on Amazon"><img src="img/logos/amazon.png" alt="Deezer" width="32px"></a> 
+
 				<small class="text-clouds hidden">
 					Duration: <?php print $song->getDuration( 'i \m\i\n s \s\e\c' ); ?> 
 				</small>

@@ -85,6 +85,17 @@ function validateAlbum() {
 	return false;
 }
 
+function validateArtist() {
+	if( $('#name_artist').val().length > 0 
+	&& $('#pic_artist').val().length > 0
+	&& $('#bio_artist').val().length > 0 ) 
+	{
+		$('#submit_artist').removeClass('hidden');
+	}
+}
+
+
+
 var artists, genres;
 $.post( "ajax.artists.php", {}, function(data) {
 	for (var i in data) 
