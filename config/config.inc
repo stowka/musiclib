@@ -17,4 +17,4 @@
 		$user = $_SESSION['user'];
 
 	# Constants
-	define("TITLE", "Music Lib");
+	define("TITLE", "Music Lib.");

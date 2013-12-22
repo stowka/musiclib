@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="./"><?php print TITLE; ?></a>
+			<a class="navbar-brand" href="./"><img src="img/logos/favicon.png" width="20px" alt="ML"> <?php print TITLE; ?></a>
 		</div>
 
 		<div class="collapse navbar-collapse midnight-blue" id="bs-example-navbar-collapse-1">
