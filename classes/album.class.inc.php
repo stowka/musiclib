@@ -267,6 +267,18 @@
 			return $albums;
 		}
 
+		public static function random( $number = 1 ) {
+			$db = $_SESSION['db'];
+			$albums = array();
+			$stmt = $db->prepare( "select id from album order by rand(), 1 limit 0, ?;" );
+			$stmt->bindParam(1, $number, PDO::PARAM_INT);
+			$stmt->execute();
+			while ( $album = $stmt->fetch(PDO::FETCH_NUM) )
+				$albums[] = new Album( $album[0] );
+			$stmt->closeCursor();
+			return $albums;
+		}
+
 		public static function top( $number = 1 ) {
 			$db = $_SESSION['db'];
 			$albums = array();
