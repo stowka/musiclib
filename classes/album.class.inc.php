@@ -185,6 +185,30 @@
 			return $average[0];
 		}
 
+
+
+		public function isAgreedBy( $u ) {
+			$stmt = $this->db->prepare( "select count(*) from notarizeAlbum where user = ? and album = ? and agreement = 1;" );
+			$stmt->execute( array( 
+				$u,
+				$this->getId(),
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $count[0];
+		}
+
+		public function isDisagreedBy( $u ) {
+			$stmt = $this->db->prepare( "select count(*) from notarizeAlbum where user = ? and album = ? and agreement = 0;" );
+			$stmt->execute( array( 
+				$u,
+				$this->getId(),
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $count[0];
+		}
+
 		/*
 		 * ===
 		 * SETTERS

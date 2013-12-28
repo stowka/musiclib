@@ -242,11 +242,30 @@ if ((count($search_songs)+count($search_albums)+count($search_artists)+count($se
 	 */
 	if ( isset( $_SESSION['online'] ) 
 	&& ( isset( $_POST['agree'] ) || isset( $_POST['disagree'] ) )
-	&& isset( $_POST['cause'] ) ):
+	&& isset( $_POST['cause'] ) 
+	&& isset( $_POST['artist'] ) ):
 		$agreement = isset( $_POST['disagree'] ) ? 0 : 1;
 		$user = $_SESSION['user']->getId();
 		$artist = $_GET['id'];
 		$cause = $_POST['cause'];
 		$cause = $agreement == 1 ? 0 : $cause;
 		NotarizeArtist::create( $user, $artist, $agreement, $cause );
+	endif;
+
+	# Process notarize album
+	/**
+	 *
+	 * @author Antoine De Gieter
+	 *
+	 */
+	if ( isset( $_SESSION['online'] ) 
+	&& ( isset( $_POST['agree'] ) || isset( $_POST['disagree'] ) )
+	&& isset( $_POST['cause'] ) 
+	&& isset( $_POST['album'] ) ):
+		$agreement = isset( $_POST['disagree'] ) ? 0 : 1;
+		$user = $_SESSION['user']->getId();
+		$album = $_GET['id'];
+		$cause = $_POST['cause'];
+		$cause = $agreement == 1 ? 0 : $cause;
+		NotarizeAlbum::create( $user, $album, $agreement, $cause );
 	endif;

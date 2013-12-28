@@ -23,6 +23,7 @@
         <?php if ( isset( $_SESSION['online'] ) ) : ?>
 	        <div class="btn-group btn-group-lg pull-right">
 	                <form method="post" action="<?php print $artist->getUrl(); ?>" id="notarizeAgree" style="display:inline;">
+	                	<input type="hidden" name="artist">
 	                	<input type="hidden" name="agree">
 	                	<input type="hidden" name="cause">
 	                	<button class="btn btn-success" type="submit" title="Right informations" <?php print $artist->isAgreedBy( $_SESSION['user']->getId() ) ? 'disabled' : ''; ?>>
@@ -30,6 +31,7 @@
 	                	</button>
 	                </form>
 	                <form method="post" action="<?php print $artist->getUrl(); ?>" id="notarizeDisagree" style="display:inline;">
+	                	<input type="hidden" name="artist">
 	                	<input type="hidden" name="disagree">
 	                	<input type="hidden" id="cause" name="cause" value="0">
 	                	<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button" title="Wrong informations" <?php print $artist->isDisagreedBy( $_SESSION['user']->getId() ) ? 'disabled' : ''; ?>>

@@ -28,6 +28,30 @@
 			$this->cause = new Cause( $notarization['cause'] );
 		}
 
+		public static function countAgreeByAlbum( $album ) {
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from notarizeAlbum where album = :album and agreement = 1;");
+			$stmt->execute(array(
+				"album" => $album
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+			return $count;
+		}
+
+		public static function countDisagreeByAlbum( $album ) {
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from notarizeAlbum where album = :album and agreement = 0;");
+			$stmt->execute(array(
+				"album" => $album
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+			return $count;
+		}
+
 		/*
 		 * ===
 		 * GETTERS
@@ -35,5 +59,43 @@
 		 */
 		public function getAlbum() {
 			return $this->album;
+		}
+
+		/*
+		 * ===
+		 * STATIC METHODS
+		 * ===
+		 */
+		public static function create( $user, $album, $agreement, $cause ) {
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from notarizeAlbum where user = ? and album = ?;");
+			$stmt->execute( array(
+				$user,
+				$album
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+
+
+			if ( !$count ): 
+				$stmt = $db->prepare("insert into notarizeAlbum (user, album, agreement, cause) values (?, ?, ?, ?);");
+				$stmt->execute( array(
+					$user,
+					$album, 
+					$agreement,
+					$cause
+				) );
+				$stmt->closeCursor();
+			else:
+				$stmt = $db->prepare("update notarizeAlbum set agreement = ?, cause = ? where user = ? and album = ?;");
+				$stmt->execute( array(
+					$agreement,
+					$cause,
+					$user, 
+					$album
+				) );
+				$stmt->closeCursor();
+			endif;
 		}
 	}
