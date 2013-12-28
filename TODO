@@ -1,11 +1,10 @@
 Mettre toutes les chansons ajoutés avec add album par un user en known.
 UTF8 Ajax
-Notarize artist + album
 enregistrer les artworks dans la base de données
 
 Corriger 404
 	select => radio
-	alert => disv class="alert"
+	alert => div class="alert"
 	1 point(s)
 	espace entre les choix et le bouton
 	toujours afficher le bouton, disabled true/false
