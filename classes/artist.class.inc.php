@@ -220,6 +220,18 @@
 			return $artists;
 		}
 
+		public static function random( $number = 1 ) {
+			$db = $_SESSION['db'];
+			$artists = array();
+			$stmt = $db->prepare( "select id from artist order by rand(), 1 limit 0, ?;" );
+			$stmt->bindParam(1, $number, PDO::PARAM_INT);
+			$stmt->execute();
+			while ( $artist = $stmt->fetch(PDO::FETCH_NUM) )
+				$artists[] = new Artist( $artist[0] );
+			$stmt->closeCursor();
+			return $artists;
+		}
+
 		public static function top( $number = 1 ) {
 			$db = $_SESSION['db'];
 			$artists = array();
