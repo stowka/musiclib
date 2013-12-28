@@ -1,1 +1,15 @@
 Mettre toutes les chansons ajoutés avec add album par un user en known.
+UTF8 Ajax
+Notarize artist + album
+Corriger 404
+	select => radio
+	alert => disv class="alert"
+	1 point(s)
+	espace entre les choix et le bouton
+	toujours afficher le bouton, disabled true/false
+	changer le good job man en je sais pas quoi d'autre :P
+	dans l'ajax.php utiliser le méthode statique random de Artist (que je suis
+	en train de faire)
+
+Extra:
+page de profil, afficher un top comment

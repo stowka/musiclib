@@ -230,5 +230,6 @@ if ((count($search_songs)+count($search_albums)+count($search_artists)+count($se
 		$user = $_SESSION['user']->getId();
 		$userComment = $_POST['userComment'];
 		$songComment = $_POST['songComment'];
-		GradeComment::create( $user, $userComment, $songComment, $agreement );
+		if ( $user != $userComment )
+			GradeComment::create( $user, $userComment, $songComment, $agreement );
 	endif;
