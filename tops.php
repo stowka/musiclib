@@ -29,9 +29,9 @@
 							<?php
 								$c=1;
 								foreach($top_songs as $song):
-									print '<h4 class="padded">';
-									print $c.'. <a href="'.$song->getUrl().'">';
-									print $song . '</a></h4><h5 class="padded"> by <a href="'. $song->getMainArtist()->getUrl() . '" >' .$song->getMainArtist(). '</a></h5>' ;
+									print '<p class="padded">';
+									print $c.'. <a href="'.$song->getUrl().'" data-toggle="tooltip" title="'.$song.'.">';
+									print truncateTextByChars( $song ) . '</a></p><h6 class="padded"> by <a href="'. $song->getMainArtist()->getUrl() . '" >' .$song->getMainArtist(). '</a></h6>' ;
 									print '<div class="image-cropper"><img src="'. $song->getMainAlbum()->getArtwork() . '" width="100%" class="centered"></div>';
 									print '<hr>';
 									$c++;
@@ -50,9 +50,9 @@
 							<?php
 								$c=1;
 								foreach($top_artists as $artist):
-									print '<h4 class="padded">';
-									print $c.'. <a href="'.$artist->getUrl().'">';
-									print $artist . '</a></h4><h5 class="padded"><br></h5>';
+									print '<p class="padded">';
+									print $c.'. <a href="'.$artist->getUrl().'" data-toggle="tooltip" title="'.$artist.'.">';
+									print truncateTextByChars( $artist ) . '</a></p><h6 class="padded"><br></h6>';
 									print '<div class="image-cropper"><img src="img/artists/'. $artist->getPicture() . '" width="100%" class="centered"></div>';
 									print '<hr>';
 									$c++;
@@ -72,9 +72,9 @@
 							<?php
 								$c=1;
 								foreach($top_albums as $album):
-									print '<h4 class="padded">';
-									print $c.'. <a href="'.$album->getUrl().'">';
-									print $album . '</a></h4><h5 class="padded"> by <a href="'. $album->getMainArtist()->getUrl() . '" >' .$album->getMainArtist(). '</a></h5>' ;
+									print '<p class="padded">';
+									print $c.'. <a href="'.$album->getUrl().'" data-toggle="tooltip" title="'.$album.'.">';
+									print truncateTextByChars( $album ) . '</a></p><h6 class="padded"> by <a href="'. $album->getMainArtist()->getUrl() . '" >' .$album->getMainArtist(). '</a></h6>' ;
 									print '<div class="image-cropper"><img src="'. $album->getArtwork() . '" width="100%" class="centered"></div>';
 									print '<hr>';
 									$c++;
