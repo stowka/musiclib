@@ -10,5 +10,10 @@
 	foreach( $genres as $genre )
 		$g[] = $genre[0];
 	$stmt->closeCursor();
+	array_walk_recursive( $g, function( &$value, $key ) {
+		if ( is_string( $value ) ) {
+			$value = iconv( 'windows-1252', 'utf-8', $value );
+		}
+	});
 
 	print json_encode( $g );
