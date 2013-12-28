@@ -66,7 +66,7 @@ foreach ( $song->getComments() as $comment )
 				<input type="hidden" name="agree">
 				<input type="hidden" name="userComment" value="<?php print $comment->getUser()->getId(); ?>">
 				<input type="hidden" name="songComment" value="<?php print $comment->getSong()->getId(); ?>">
-				<button name="gradeComment<?php print $comment->getUser()->getId(); ?><?php print $comment->getSong()->getId(); ?>" class="btn btn-success <?php if ( $comment->agreedBy( $user->getId() ) ) print 'active'; ?>" style="width:75px" type="radio" <?php print ($_SESSION['user']->getId()===$comment->getUser()->getId() || $comment->agreedBy( $user->getId())) ? 'disabled' : ''; ?>>
+				<button name="gradeComment<?php print $comment->getUser()->getId(); ?><?php print $comment->getSong()->getId(); ?>" class="btn btn-success <?php if ( $comment->isAgreedBy( $user->getId() ) ) print 'active'; ?>" style="width:75px" type="radio" <?php print ($_SESSION['user']->getId()===$comment->getUser()->getId() || $comment->isAgreedBy( $user->getId())) ? 'disabled' : ''; ?>>
 					 <span class="glyphicon glyphicon-thumbs-up"> <?php print GradeComment::countAgreeByComment( $comment->getUser()->getId(), $comment->getSong()->getId() ); ?></span>
 				</button>
 			</form>
@@ -74,7 +74,7 @@ foreach ( $song->getComments() as $comment )
 				<input type="hidden" name="disagree">
 				<input type="hidden" name="userComment" value="<?php print $comment->getUser()->getId(); ?>">
 				<input type="hidden" name="songComment" value="<?php print $comment->getSong()->getId(); ?>">
-				<button name="gradeComment<?php print $comment->getUser()->getId(); ?><?php print $comment->getSong()->getId(); ?>" class="btn btn-danger <?php if ( $comment->disagreedBy( $user->getId() ) ) print 'active'; ?>" style="width:75px" type="radio" <?php print ($_SESSION['user']->getId()===$comment->getUser()->getId() || $comment->disagreedBy( $user->getId())) ? 'disabled' : ''; ?>>
+				<button name="gradeComment<?php print $comment->getUser()->getId(); ?><?php print $comment->getSong()->getId(); ?>" class="btn btn-danger <?php if ( $comment->isDisagreedBy( $user->getId() ) ) print 'active'; ?>" style="width:75px" type="radio" <?php print ($_SESSION['user']->getId()===$comment->getUser()->getId() || $comment->isDisagreedBy( $user->getId())) ? 'disabled' : ''; ?>>
 					 <span class="glyphicon glyphicon-thumbs-down"> <?php print GradeComment::countDisagreeByComment( $comment->getUser()->getId(), $comment->getSong()->getId() ); ?></span>
 				</button>	
 			</form>

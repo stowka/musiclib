@@ -233,3 +233,20 @@ if ((count($search_songs)+count($search_albums)+count($search_artists)+count($se
 		if ( $user != $userComment )
 			GradeComment::create( $user, $userComment, $songComment, $agreement );
 	endif;
+
+	# Process notarize artist
+	/**
+	 *
+	 * @author Antoine De Gieter
+	 *
+	 */
+	if ( isset( $_SESSION['online'] ) 
+	&& ( isset( $_POST['agree'] ) || isset( $_POST['disagree'] ) )
+	&& isset( $_POST['cause'] ) ):
+		$agreement = isset( $_POST['disagree'] ) ? 0 : 1;
+		$user = $_SESSION['user']->getId();
+		$artist = $_GET['id'];
+		$cause = $_POST['cause'];
+		$cause = $agreement == 1 ? 0 : $cause;
+		NotarizeArtist::create( $user, $artist, $agreement, $cause );
+	endif;

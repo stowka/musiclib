@@ -28,7 +28,7 @@
 			$this->date = new Timestamp( $comment['date'] );
 		}
 
-		public function agreedBy( $u ) {
+		public function isAgreedBy( $u ) {
 			$stmt = $this->db->prepare( "select count(*) from gradeComment where user = ? and userComment = ? and songComment = ? and agreement = 1;" );
 			$stmt->execute( array( 
 				$u,
@@ -40,7 +40,7 @@
 			return $count[0];
 		}
 
-		public function disagreedBy( $u ) {
+		public function isDisagreedBy( $u ) {
 			$stmt = $this->db->prepare( "select count(*) from gradeComment where user = ? and userComment = ? and songComment = ? and agreement = 0;" );
 			$stmt->execute( array( 
 				$u,

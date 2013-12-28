@@ -1,6 +1,8 @@
 Mettre toutes les chansons ajoutés avec add album par un user en known.
 UTF8 Ajax
 Notarize artist + album
+enregistrer les artworks dans la base de données
+
 Corriger 404
 	select => radio
 	alert => disv class="alert"
@@ -10,6 +12,7 @@ Corriger 404
 	changer le good job man en je sais pas quoi d'autre :P
 	dans l'ajax.php utiliser le méthode statique random de Artist (que je suis
 	en train de faire)
+	ajouter un message d'erreur pour prévenir qu'on est sur la 404 quand même
 
 Extra:
 page de profil, afficher un top comment

@@ -36,4 +36,68 @@
 		public function getArtist() {
 			return $this->artist;
 		}
+
+		
+
+		/*
+		 * ===
+		 * STATIC METHODS
+		 * ===
+		 */
+		public static function countAgreeByArtist( $artist ) {
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from notarizeArtist where artist = :artist and agreement = 1;");
+			$stmt->execute(array(
+				"artist" => $artist
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+			return $count;
+		}
+
+		public static function countDisagreeByArtist( $artist ) {
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from notarizeArtist where artist = :artist and agreement = 0;");
+			$stmt->execute(array(
+				"artist" => $artist
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+			return $count;
+		}
+
+		public static function create( $user, $artist, $agreement, $cause ) {
+			$db = $_SESSION['db'];
+			$stmt = $db->prepare("select count(*) from notarizeArtist where user = ? and artist = ?;");
+			$stmt->execute( array(
+				$user,
+				$artist
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$count = $count[0];
+			$stmt->closeCursor();
+
+
+			if ( !$count ): 
+				$stmt = $db->prepare("insert into notarizeArtist (user, artist, agreement, cause) values (?, ?, ?, ?);");
+				$stmt->execute( array(
+					$user,
+					$artist, 
+					$agreement,
+					$cause
+				) );
+				$stmt->closeCursor();
+			else:
+				$stmt = $db->prepare("update notarizeArtist set agreement = ?, cause = ? where user = ? and artist = ?;");
+				$stmt->execute( array(
+					$agreement,
+					$cause,
+					$user, 
+					$artist
+				) );
+				$stmt->closeCursor();
+			endif;
+		}
 	}

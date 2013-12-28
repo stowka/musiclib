@@ -17,13 +17,14 @@
 		}
 
 		private function fetchData( $id ) {
-			$stmt = $this->db->prepare( "select * from cause where id = ?" );
+			$stmt = $this->db->prepare( "select cause from cause where id = ?" );
 			$stmt->execute( array(
 				$id
 			) );
-			$type = $stmt->fetch(PDO::FETCH_ASSOC);
+			$this->id = $id;
+			$cause = $stmt->fetch(PDO::FETCH_ASSOC);
 			$stmt->closeCursor();
-			$this->label = $type['cause'];
+			$this->cause = $cause['cause'];
 		}
 
 		/*

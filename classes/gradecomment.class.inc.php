@@ -100,7 +100,6 @@
 				) );
 				$stmt->closeCursor();
 			endif;
-			return new GradeComment($user, $userComment, $songComment);
 		}
 
 		public static function countAgreeByComment( $userComment, $songComment ){
