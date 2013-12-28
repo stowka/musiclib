@@ -70,7 +70,7 @@
 
 		public static function create( $user, $userComment, $songComment, $agreement ) {
 			$db = $_SESSION['db'];
-			$stmt = $db->prepare("select count(*) from gradeComment where user = ? and comment = ?");
+			$stmt = $db->prepare("select count(*) from gradeComment where user = ? and userComment = ? and songComment = ?");
 			$stmt->execute( array(
 				$user,
 				$userComment, 
@@ -82,15 +82,25 @@
 
 
 			if ( !$count ): 
-			$stmt = $this->db->prepare("insert into gradeComment (user, comment, agreement) values (?, ?, ?)");
-			$stmt->execute( array(
-				$user,
-				$userComment, $songComment,
-				$agreement
-			) );
-			return new GradeComment($user, $userComment, $songComment);
+				$stmt = $db->prepare("insert into gradeComment (user, userComment, songComment, agreement) values (?, ?, ?, ?);");
+				$stmt->execute( array(
+					$user,
+					$userComment, 
+					$songComment,
+					$agreement
+				) );
+				$stmt->closeCursor();
+			else:
+				$stmt = $db->prepare("update gradeComment set agreement = ? where user = ? and userComment = ? and songComment = ?;");
+				$stmt->execute( array(
+					$agreement,
+					$user,
+					$userComment, 
+					$songComment
+				) );
+				$stmt->closeCursor();
 			endif;
-			return false;
+			return new GradeComment($user, $userComment, $songComment);
 		}
 
 		public static function countAgreeByComment( $userComment, $songComment ){

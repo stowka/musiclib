@@ -215,3 +215,20 @@ if ((count($search_songs)+count($search_albums)+count($search_artists)+count($se
 			$_SESSION['error'] = true;
 		endif;
 	endif;
+
+	# Process grade comment
+	/**
+	 *
+	 * @author Antoine De Gieter
+	 *
+	 */
+	if ( isset( $_SESSION['online'] ) 
+	&& (isset( $_POST['agree'] ) || isset( $_POST['disagree'] ) )
+	&& isset( $_POST['userComment'] )
+	&& isset( $_POST['songComment'] ) ):
+		$agreement = isset( $_POST['agree'] ) ? 1 : 0;
+		$user = $_SESSION['user']->getId();
+		$userComment = $_POST['userComment'];
+		$songComment = $_POST['songComment'];
+		GradeComment::create( $user, $userComment, $songComment, $agreement );
+	endif;

@@ -15,7 +15,7 @@
 			$this->fetchData( $user, $song );
 		}
 
-		public function fetchData( $user, $song ) {
+		private function fetchData( $user, $song ) {
 			$stmt = $this->db->prepare( "select * from comment where user = ? and song = ?;" );
 			$stmt->execute( array(
 				$user,
@@ -26,6 +26,30 @@
 			$this->song = new Song( $song );
 			$this->text = $comment['text'];
 			$this->date = new Timestamp( $comment['date'] );
+		}
+
+		public function agreedBy( $u ) {
+			$stmt = $this->db->prepare( "select count(*) from gradeComment where user = ? and userComment = ? and songComment = ? and agreement = 1;" );
+			$stmt->execute( array( 
+				$u,
+				$this->user->getId(),
+				$this->song->getId()
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $count[0];
+		}
+
+		public function disagreedBy( $u ) {
+			$stmt = $this->db->prepare( "select count(*) from gradeComment where user = ? and userComment = ? and songComment = ? and agreement = 0;" );
+			$stmt->execute( array( 
+				$u,
+				$this->user->getId(),
+				$this->song->getId()
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $count[0];
 		}
 
 		/*
