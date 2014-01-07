@@ -31,7 +31,7 @@
 	<hr>
 	<p class="padded">
 		<button class="btn btn-warning btn-block" data-toggle="modal" data-target="#message-admin">Contact the admin</button>
-		<button class="btn btn-danger btn-block">Delete account</button>
+		<button class="btn btn-danger btn-block" disabled>Delete account</button>
 	</p>
 </div>
 <div class="padded"></div>
