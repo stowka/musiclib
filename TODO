@@ -1,10 +1,10 @@
-Mettre toutes les chansons ajoutés avec add album par un user en known.
-Gérer le problème du login avec un mauvais mot de passe
-Gérer les inscriptions
-Éditer profil
-enregistrer les artworks dans la base de données
-afficher l'artwork dès que l'artiste et le nom de l'album sont remplis (ajax)
-permettre l'upload d'un artwork si celui de l'api est introuvable / nul
+√ Mettre toutes les chansons ajoutés avec add album par un user en known.
+ Gérer le problème du login avec un mauvais mot de passe
+ Gérer les inscriptions
+ Éditer profil
+√ enregistrer les artworks dans la base de données
+ afficher l'artwork dès que l'artiste et le nom de l'album sont remplis (ajax)
+ permettre l'upload d'un artwork si celui de l'api est introuvable / nul
 √ page d'accueil changer le bloc description (extra : last activities)
 
 Corriger 404
