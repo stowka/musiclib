@@ -421,6 +421,7 @@
 				unset( $_SESSION['online'] );
 			if ( isset( $_SESSION['user'] ) )
 				unset( $_SESSION['user'] );
+			Page::go("index.php");
 		}
 
 		public static function getIdFromUsername( $username ) {

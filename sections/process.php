@@ -38,7 +38,6 @@
 	if ( isset( $_POST['logout'] )
 	&& empty( $_POST['logout'] ) ) :
 		User::logout();
-		header("Location: ./");
 	endif;
 
 	# Process sign in
@@ -53,8 +52,6 @@
 		$email = addslashes( htmlspecialchars( $_POST['email'] ) );
 		$passwd = addslashes( htmlspecialchars( $_POST['password'] ) );
 		User::create( $user, $email, $passwd );
-		$_SESSION['user'] = new User( User::login( $user, $passwd ) );
-		$_SESSION['online'] = true;
 		$_SESSION['signedIn'] = true;
 	endif;
 
