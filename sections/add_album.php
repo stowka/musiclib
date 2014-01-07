@@ -31,7 +31,7 @@
 							foreach ( AlbumType::all() as $type)
 								{
 							?>
-							<option <?php print ($type->getId()===6) ? '' : 'selected'; ?> 
+							<option <?php print ( (int)$type->getId() === 6) ? 'selected' : ''; ?> 
 							value="<?php print $type->getId(); ?>">
 								<?php print $type; ?>
 							</option>
