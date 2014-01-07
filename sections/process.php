@@ -216,6 +216,123 @@ if ((count($search_songs)+count($search_albums)+count($search_artists)+count($se
 		endif;
 	endif;
 
+	#Process add album
+	/**
+	 *
+	 * @author Antoine De Gieter
+	 *
+	 *
+	 */
+	if ( isset( $_POST['album_name'] )
+	&& isset( $_POST['disc'] )
+	&& isset( $_POST['release_date'] )
+	&& isset( $_POST['type'] ) ):
+		$db = $_SESSION['db'];
+	
+		$album_name = utf8_decode( trim( htmlspecialchars( $_POST['album_name'] ) ) );
+		$disc = utf8_decode( trim( htmlspecialchars( $_POST['disc'] ) ) );
+		$release_date = strtotime ( utf8_decode( trim( htmlspecialchars( $_POST['release_date'] ) ) ) ) + 3600;
+		$type = utf8_decode( trim( htmlspecialchars( $_POST['type'] ) ) );
+
+		$stmt = $db->prepare( "insert into album (name, disc, releaseDate, uploadDate, uploadUser, type) values (:name, :disc, :rDate, unix_timestamp(), :uUser, :type);" );
+		$stmt->execute( array(
+			"name" => $album_name,
+			"disc" => $disc,
+			"rDate" => $release_date,
+			"uUser" => $_SESSION['user']->getId(),
+			"type" => $type,
+		) );
+		$stmt->closeCursor();
+
+		$album_id = $db->lastInsertId();
+
+		# RELEASE
+		$release_artists = explode( "%@", $_POST['artists'] );
+		foreach( $release_artists as $artist ):
+			$stmt = $db->prepare( "select id from artist where name = ?;" );
+			$stmt->execute( array(
+				$artist
+			) );
+			$artist_id = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			$artist_id = $artist_id[0];
+
+			$stmt = $db->prepare( "insert into `release` (artist, album) values (:artist, :album);" );
+			$stmt->execute( array(
+				"artist" => $artist_id,
+				"album" => $album_id
+			) );
+			$stmt->closeCursor();
+		endforeach;
+
+
+		# SONG
+		$n = 1;
+		while ( !empty( $_POST['title_' . $n] )
+		&& !empty( $_POST['artists_' . $n] )
+		&& !empty( $_POST['genres_' . $n] )	):
+			$title = utf8_decode( trim( htmlspecialchars( $_POST['title_' . $n] ) ) );
+			$stmt = $db->prepare( "insert into song (title, duration, lyrics) values (:title, 0, '');" );
+			$stmt->execute( array(
+				"title" => $title
+			) );
+			$stmt->closeCursor();
+
+			$song_id = $db->lastInsertId();
+
+			# INCLUDE
+			$stmt = $db->prepare( "insert into include (album, song, track) values (:album, :song, :track);" );
+			$stmt->execute( array(
+				"album" => $album_id,
+				"song" => $song_id,
+				"track" => $n
+			) );
+			$stmt->closeCursor();
+
+
+			# PERFORM
+			$title_artists = explode( "%@", $_POST['artists_' . $n] );
+			foreach( $title_artists as $artist ):
+				$stmt = $db->prepare( "select id from artist where name = ?;" );
+				$stmt->execute( array(
+					$artist
+				) );
+				$artist_id = $stmt->fetch(PDO::FETCH_NUM);
+				$stmt->closeCursor();
+				$artist_id = $artist_id[0];
+
+				$stmt = $db->prepare( "insert into perform (artist, song) values (:artist, :song);" );
+				$stmt->execute( array(
+					"artist" => $artist_id,
+					"song" => $song_id
+				) );
+				$stmt->closeCursor();
+			endforeach;
+
+			# BELONG
+			$title_genres = explode( "%@", $_POST['genres_' . $n] );
+			foreach( $title_genres as $genre ):
+				$stmt = $db->prepare( "select id from genre where label = ?;" );
+				$stmt->execute( array(
+					$genre
+				) );
+				$genre_id = $stmt->fetch(PDO::FETCH_NUM);
+				$stmt->closeCursor();
+				$genre_id = $genre_id[0];
+
+				$stmt = $db->prepare( "insert into belong (song, genre) values (:song, :genre);" );
+				$stmt->execute( array(
+					"song" => $song_id,
+					"genre" => $genre_id
+				) );
+				$stmt->closeCursor();
+			endforeach;
+
+			$n++;
+		endwhile;
+		Page::goAlbum( $album_id );
+	endif;
+
 	# Process grade comment
 	/**
 	 *

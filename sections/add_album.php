@@ -1,4 +1,4 @@
-<form id="form-add-album" action="test2.php" method="post">
+<form id="form-add-album" action="" method="post">
 	<input type="hidden" name="add_album">
 	<fieldset>
 		<div class="padded"></div>
