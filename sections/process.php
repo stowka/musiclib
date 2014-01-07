@@ -14,6 +14,7 @@
 	$_SESSION['messageSent'] = false;
 	$_SESSION['artistAdded'] = false;
 	$_SESSION['albumAdded'] = false;
+	$_SESSION['errorLogin'] = false;
 
 	$_SESSION['error'] = false;
 
@@ -28,6 +29,8 @@
 			$_SESSION['user'] = new User( User::login( $user, $passwd ) );
 			$_SESSION['online'] = true;
 			$_SESSION['loggedIn'] = true;
+		else:
+			$_SESSION['errorLogin'] = true;
 		endif;
 	endif;
 

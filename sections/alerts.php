@@ -16,6 +16,23 @@
 ?>
 
 <?php
+	if ( $_SESSION['errorLogin'] ):
+?>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="alert alert-danger">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Oops!</strong><br>
+					Something went wrong with your username or password!
+				</div>
+			</div>
+		</div>
+<?php
+		unset( $_SESSION['errorLogin'] );
+	endif;
+?>
+
+<?php
 	if ( $_SESSION['signedIn'] ):
 ?>
 		<div class="row">
