@@ -11,10 +11,14 @@
 		$a[] = [$artist[0],$artist[1],$artist[2]];
 	$stmt->closeCursor();
 
-
-//	Link of the first (and so good) artist!
-
 	$tmp = new Artist($a[0][0]);
 	$a[4][0] = $tmp->getUrl();
+	
+        array_walk_recursive( $a, function( &$value, $key ) {
+                if ( is_string( $value ) ) {
+                        $value = iconv( 'windows-1252', 'utf-8', $value );
+                }
+        });
+
 
 	print json_encode($a);
