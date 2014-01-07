@@ -1,9 +1,9 @@
 <?php
 	require_once "config/config.inc";
 
-	$top_songs = Song::top(2);
-	$top_albums = Album::top(2);
-	$top_artists = Artist::top(2);
+	$top_songs = Song::top(100);
+	$top_albums = Album::top(100);
+	$top_artists = Artist::top(100);
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@
 								$c=1;
 								foreach($top_songs as $song):
 									print '<p class="padded">';
-									print $c.'. <a href="'.$song->getUrl().'" data-toggle="tooltip" title="'.$song.'.">';
+									print $c.'. <a href="'.$song->getUrl().'" data-toggle="tooltip" title="'.$song.'">';
 									print truncateTextByChars( $song ) . '</a></p><h6 class="padded"> by <a href="'. $song->getMainArtist()->getUrl() . '" >' .$song->getMainArtist(). '</a></h6>' ;
 									print '<div class="image-cropper"><img src="'. $song->getMainAlbum()->getArtwork() . '" width="100%" class="centered"></div>';
 									print '<hr>';
@@ -51,7 +51,7 @@
 								$c=1;
 								foreach($top_artists as $artist):
 									print '<p class="padded">';
-									print $c.'. <a href="'.$artist->getUrl().'" data-toggle="tooltip" title="'.$artist.'.">';
+									print $c.'. <a href="'.$artist->getUrl().'" data-toggle="tooltip" title="'.$artist.'">';
 									print truncateTextByChars( $artist ) . '</a></p><h6 class="padded"><br></h6>';
 									print '<div class="image-cropper"><img src="img/artists/'. $artist->getPicture() . '" width="100%" class="centered"></div>';
 									print '<hr>';
@@ -73,7 +73,7 @@
 								$c=1;
 								foreach($top_albums as $album):
 									print '<p class="padded">';
-									print $c.'. <a href="'.$album->getUrl().'" data-toggle="tooltip" title="'.$album.'.">';
+									print $c.'. <a href="'.$album->getUrl().'" data-toggle="tooltip" title="'.$album.'">';
 									print truncateTextByChars( $album ) . '</a></p><h6 class="padded"> by <a href="'. $album->getMainArtist()->getUrl() . '" >' .$album->getMainArtist(). '</a></h6>' ;
 									print '<div class="image-cropper"><img src="'. $album->getArtwork() . '" width="100%" class="centered"></div>';
 									print '<hr>';
