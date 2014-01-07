@@ -407,7 +407,6 @@
 				$stmt->execute( array(
 					$id,
 					$ip,
-					$country,
 					$os,
 					$browser
 				) ) || die("Error: Impossible to log the connection.");

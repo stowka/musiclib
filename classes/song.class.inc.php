@@ -412,7 +412,6 @@
 			$artist = strtolower( preg_replace("/ /", "+", $artist) );
 			$title = strtolower( preg_replace("/ /", "+", $title) );
 			$lyrics = file_get_contents('http://api.ntag.fr/lyrics/?artist=' . $artist . '&title=' . $title);
-			$result = substr($lyrics, 2, -2);
-			return $result;
+			return preg_replace( "/Ad$/", "", preg_replace( "/^Ad/", "", $lyrics ) );
 		}
 	}

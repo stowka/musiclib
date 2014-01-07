@@ -328,6 +328,15 @@ if ((count($search_songs)+count($search_albums)+count($search_artists)+count($se
 				$stmt->closeCursor();
 			endforeach;
 
+			# LYRICS
+			$lyrics = addslashes( Song::getLyricsFromAPI( $release_artists[0], $title ) );
+			$song_id = $db->lastInsertId();
+			$stmt = $db->prepare( "update song set lyrics = :lyrics where id = :id;" );
+			$stmt->bindParam( "lyrics", $lyrics, PDO::PARAM_STR );
+			$stmt->bindParam( "id", $song_id, PDO::PARAM_INT );
+			$stmt->execute();
+			$stmt->closeCursor();
+
 			$n++;
 		endwhile;
 		Page::goAlbum( $album_id );
