@@ -29,8 +29,7 @@ function tag() {
 			return false;
 		}
 	});
-
-	$(".genre_song").tagit({
+		$(".genre_song").tagit({
 		availableTags: genres,
 		placeholderText:'Genre(s)',
 		allowSpaces:true,
@@ -78,8 +77,22 @@ function validateAlbum() {
 	if( $('#artists_list').val().length > 0 
 	&& $('#release_date').val().length === 10 
 	&& parseInt( $('#disc').val() ) > 0 
+	&& $('#album_name').val().length > 0 
 	&& !$('#song_1').length ) {
 		$('#btn_add_song').removeClass('hidden');
+		$('#artworks').removeClass('hidden');
+		var artwork;
+		$('#artworkFromLastfm').html('<img text-align="center" src="img/ressources/loading.gif">');
+		$.post( 
+			"ajax.artwork.php", 
+			{
+				album: $('#album_name').val(),
+				artists: $('#artists_list').val()
+			}, 
+			function(data) {
+				$('#artworkFromLastfm').html('<img width="100%" src="' + data + '">');
+			}
+		);
 		return true;
 	}
 	return false;
