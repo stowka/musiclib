@@ -79,18 +79,7 @@
 		}
 
 		public function getArtwork( $size = "mega" ) {
-			$stmt = $this->db->prepare( "select a.name from `release` r 
-										inner join artist a on a.id = r.artist 
-										where r.album = ? order by a.id limit 0, 1" );
-			$stmt->execute( array(
-				$this->id
-			) );
-			$artist = $stmt->fetch(PDO::FETCH_NUM);
-			$artist = $artist[0];
-			$stmt->closeCursor();
-			$artist = strtr( $artist, array('.' => '', ',' => '') );
-			$album = strtr( $this->name, array('.' => '', ',' => '') );
-			return LastFMArtwork::getArtwork( utf8_encode( $artist ), utf8_encode( $album ), true, $size );
+			return "img/albums/" . $this->id . ".jpg";
 		}
 
 		public function getMainArtist() {
@@ -255,6 +244,17 @@
 		 * STATIC METHODS
 		 * ===
 		 */
+
+		public static function storeArtworkFromAPI( $album, $size = "mega" ) {
+			$db = $_SESSION['db'];
+			$album = new Album( $album );
+			$artist = $album->getMainArtist();
+			$artist_name = strtr( $artist->getName(), array('.' => '', ',' => '') );
+			$album_name = strtr( $album->getName(), array('.' => '', ',' => '') );
+			if ( file_put_contents("img/albums/" . $album->getId() . ".jpg", file_get_contents( LastFMArtwork::getArtwork( utf8_encode( $artist_name ), utf8_encode( $album_name ), true, $size ) ) ) )
+				return true;
+			return false;
+		}
 
 		public static function all() {
 			$db = $_SESSION['db'];

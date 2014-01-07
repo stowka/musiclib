@@ -329,11 +329,20 @@ if ((count($search_songs)+count($search_albums)+count($search_artists)+count($se
 			endforeach;
 
 			# LYRICS
-			$lyrics = addslashes( Song::getLyricsFromAPI( $release_artists[0], $title ) );
-			$song_id = $db->lastInsertId();
+			$lyrics = addslashes( Song::getLyricsFromAPI( $title_artists[0], $title ) );
 			$stmt = $db->prepare( "update song set lyrics = :lyrics where id = :id;" );
 			$stmt->bindParam( "lyrics", $lyrics, PDO::PARAM_STR );
 			$stmt->bindParam( "id", $song_id, PDO::PARAM_INT );
+			$stmt->execute();
+			$stmt->closeCursor();
+
+			# ARTWORK
+			Album::storeArtworkFromAPI( $album_id );
+
+			# KNOWN
+			$stmt = $db->prepare( "insert into know (user, song, owned, date) values (:user, :song, 0, unix_timestamp());" );
+			$stmt->bindParam( "user", $_SESSION['user']->getId(), PDO::PARAM_INT );
+			$stmt->bindParam( "song", $song_id, PDO::PARAM_INT );
 			$stmt->execute();
 			$stmt->closeCursor();
 
