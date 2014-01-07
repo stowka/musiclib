@@ -10,9 +10,6 @@
 					IP Address
 				</th>
 				<th>
-					Country
-				</th>
-				<th>
 					Operating System
 				</th>
 				<th>
@@ -35,12 +32,6 @@
 						<td>
 							<?php
 								print $connection;
-							?>
-						</td>
-
-						<td>
-							<?php
-								print $connection->getCountry();
 							?>
 						</td>
 

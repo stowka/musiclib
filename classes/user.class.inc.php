@@ -401,18 +401,9 @@
 				|| eregi("iPad", $signature)) 
 					$browser .= " Mobile";
 
-				# Geo IP Location
-				$stmt = $db->prepare( "select country from ipv4 where ip = ?" );
-				$stmt->execute( array(
-					$ip
-				) );
-				$country = $stmt->fetch(PDO::FETCH_NUM);
-				$stmt->closeCursor();
-				$country = $country[0];
-
 				$stmt = $db->prepare( "insert into connection 
-									(user, ip, date, country, os, browser) 
-									values (?, ?, unix_timestamp(), ?, ?, ?);" );
+									(user, ip, date, os, browser) 
+									values (?, ?, unix_timestamp(), ?, ?);" );
 				$stmt->execute( array(
 					$id,
 					$ip,

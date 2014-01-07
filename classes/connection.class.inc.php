@@ -28,7 +28,6 @@
 			$this->user = new User( $connection['user'] );
 			$this->ip = $connection['ip'];
 			$this->date = new Timestamp( $connection['date'] );
-			$this->country = $connection['country'];
 			$this->os = $connection['os'];
 			$this->browser = $connection['browser'];
 		}
@@ -67,10 +66,6 @@
 
 		public function getdate() {
 			return $this->date;
-		}
-
-		public function getCountry() {
-			return $this->country;
 		}
 
 		public function getOs() {

@@ -21,6 +21,10 @@
 				require_once "sections/alerts.php";
 			?>
 
+			<?php
+				require_once "sections/index_about.php";
+			?>
+
 			<div class="row">
 				<div class="col-md-4">
 					<?php
@@ -43,7 +47,7 @@
 			</div>
 
 			<?php
-				require_once "sections/about.php";
+				require_once "sections/index_activities.php";
 			?>
 		</section>
 
