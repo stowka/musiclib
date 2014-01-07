@@ -79,6 +79,7 @@
 			</div>
 			<div class="modal-body">
 				<form id="form-edit-profile" action="" method="post">
+					<input type="text" name="username" class="form-control" placeholder="Name" id="username" value="<?php print $user->getUsername(); ?>"><br>
 					<input type="email" name="email" class="form-control" placeholder="E-mail" value="<?php print $user->getEmail(); ?>"><br>
 					<input type="password" name="password" class="form-control" placeholder="Old Password"><br>
 					<input type="password" name="password" class="form-control" placeholder="New Password"><br>
