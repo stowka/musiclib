@@ -11,4 +11,10 @@
 		$a[] = [$artist[0],$artist[1],$artist[2]];
 	$stmt->closeCursor();
 
+
+//	Link of the first (and so good) artist!
+
+	$tmp = new Artist($a[0][0]);
+	$a[4][0] = $tmp->getUrl();
+
 	print json_encode($a);
