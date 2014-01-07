@@ -5,6 +5,7 @@ Gérer les inscriptions
 enregistrer les artworks dans la base de données
 afficher l'artwork dès que l'artiste et le nom de l'album sont remplis (ajax)
 permettre l'upload d'un artwork si celui de l'api est introuvable / nul
+page d'accueil changer le bloc description (extra : last activities)
 
 Corriger 404
 	select => radio
