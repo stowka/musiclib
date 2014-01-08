@@ -50,7 +50,7 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<div class="peter-river">
+				<div class="asbestos">
 					<p class="padded">
 						<?php
 							foreach( $user->getKnownSongs() as $song ):
