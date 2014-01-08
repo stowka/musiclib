@@ -25,8 +25,9 @@
 	&& !empty( $_POST['password'] ) ) :
 		$user = addslashes( htmlspecialchars( $_POST['username'] ) );
 		$passwd = addslashes( htmlspecialchars( $_POST['password'] ) );
-		if ( User::login( $user, $passwd ) ):
-			$_SESSION['user'] = new User( User::login( $user, $passwd ) );
+		$id = User::login( $user, $passwd );
+		if ( $id ):
+			$_SESSION['user'] = new User( $id );
 			$_SESSION['online'] = true;
 			$_SESSION['loggedIn'] = true;
 		else:
