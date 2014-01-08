@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine De Gieter
 	 *
 	 * Class Know: modelises the relation between an User

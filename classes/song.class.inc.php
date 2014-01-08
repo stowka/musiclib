@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine De Gieter
 	 *
 	 * Class Song: modelises a song

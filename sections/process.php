@@ -144,19 +144,19 @@
 
 		$stmt->closeCursor();
 
-if ((count($search_songs)+count($search_albums)+count($search_artists)+count($search_users))===1) {
-		if (count($search_songs)==1):
-			Page::goSong($search_songs[0]->getId());
-		endif;
-		if (count($search_artists)==1):
-			Page::goArtist($search_artists[0]->getId());
-		endif;
-		if (count($search_albums)==1):
-			Page::goAlbum($search_albums[0]->getId());
-		endif;
-		if (count($search_users)==1):
-			Page::goUser($search_users[0]->getId());
-		endif;
+		if ((count($search_songs)+count($search_albums)+count($search_artists)+count($search_users))===1) {
+				if (count($search_songs)==1):
+					Page::goSong($search_songs[0]->getId());
+				endif;
+				if (count($search_artists)==1):
+					Page::goArtist($search_artists[0]->getId());
+				endif;
+				if (count($search_albums)==1):
+					Page::goAlbum($search_albums[0]->getId());
+				endif;
+				if (count($search_users)==1):
+					Page::goUser($search_users[0]->getId());
+				endif;
 		}
 
 	endif;

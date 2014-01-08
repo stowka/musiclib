@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine De Gieter
 	 *
 	 * Class Rate: modelises the relation between an User

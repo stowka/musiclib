@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine De Gieter
 	 *
 	 * Class AlbumType: modelises an album type

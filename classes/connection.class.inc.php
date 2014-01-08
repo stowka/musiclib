@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine De Gieter
 	 *
 	 * Class Connection: modelises a user connection.

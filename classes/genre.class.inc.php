@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine Mady
 	 *
 	 * Class Genre: modelises a genre of a song.

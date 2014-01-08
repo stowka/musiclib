@@ -1,0 +1,106 @@
+Rapport technique:
+
+	PHP - 62.5 %
+	============
+
+	Le PHP a été le langage principal de ce projet.
+	C'est le langage de script qui a permi de dynamiser le contenu de notre application web.
+	Il a été utilisé sous forme Orientée Objet et Procédurale.
+		- PHP Objet :
+			Les modèles provenant de la base de données.
+		- PHP Procédural :
+			Utilisation des modèles dans les fichiers des pages.
+
+	A travaillé sur le PHP Objet et la conception des classes :
+		- Antoine De Gieter
+		- Antoine Mady
+		- Jérôme Boesch
+		- Alexis Beaujon
+
+	A travaillé sur le PHP Procédural :
+		tout le monde
+
+	Le PHP a été aussi utilisé en tant que script pur afin de créer des documents de type application/json et text/plain
+	contenant des données demandées au serveur en AJAX.
+
+	Le PHP a permis aussi de se connecter à la base de données MySQL mise en place pour stocker les données du site.
+	Les requêtes SQL ont été préparées et executés à l'aide de PDO.
+
+	Des ressources externes ont été utilisées en PHP :
+		- PHPMailer (https://github.com/PHPMailer/PHPMailer) :
+			une classe PHP permettant d'envoyer des mails depuis PHP (elle simplifie la création des headers de mail)
+		- LastFMArtwork (http://jonjones.org.uk) :
+			une classe PHP permettant de récupérer des jaquettes d'album grâce à L'API du site Last FM.
+
+
+	JavaScript - 31.6 %
+	===================
+
+	Le JavaScript est le second langage le plus utilisé dans ce projet.
+	Ce langage de script côté client a permi de simplifier l'interaction des utilisateurs avec le site 
+	(interface homme-machine).
+
+	Il a été utilisé de manière brute ainsi qu'avec le framework jQuery (http://code.jquery.com).
+		- JavaScript brut :
+			certains calculs et évènements
+		- jQuery :
+			les requêtes AJAX (qui sont bien plus simples à mettre en place avec jQuery)
+			certains évènements
+
+	A travaillé sur JavaScript / jQuery:
+		- Antoine Mady
+		- Antoine De Gieter
+		- Alexis Beaujon
+
+	Des ressources externes ont été utilisées en JavaScript :
+		- Twitter Bootstrap 3 (http://getbootstrap.com) :
+			un framework complet mis à disposition afin d'avoir une base pour concevoir des sites internet
+		- Tag-it! (http://aehlke.github.io/tag-it) :
+			permet la mise en place de "tags" dans un champ de type text
+		- jQuery-File-Upload (https://github.com/blueimp/jQuery-File-Upload) :
+			permet le téléchargement de fichier par l'interaction client serveur en AJAX
+
+
+	HTML5 / CSS3 - 3.7%
+	===================
+
+	Le HTML5 est la structure utilisée pour afficher les données (classique pour un site internet).
+	Le CSS3 a été utilisé pour mettre en forme les données en HTML.
+
+	Une ressource a été mise en place afin d'avoir une base propre afin de commencer la charte graphique :
+		- Twitter Bootstrap 3 (http://getbootstrap.com) :
+			même framework que pour le JavaScript
+	Antoine De Gieter a réécrit une surcouche de ce Bootstrap afin d'avoir un style particulier basé sur un design "flat"
+	dans une style similaire au "Metro" de Windows 8.
+
+	Les ressources externes telles que Tag-It! et jQUery-File-Upload mettent à disposition leur propres feuilles de styles qui
+	viennent s'ajouter au style présent.
+
+
+	SQL - 2.2%
+	==========
+	Les requêtes SQL ont été les premières choses à réaliser pour le projet, en effet, elles ont été nécessaires à la réalisation des classes PHP.
+	Nous avons donc réalisé environ 30 requêtes de bases (celles qui nous apparaîssaient indispensables).
+	Certaines ont été plsu compliquées que d'autres et ont nécessité plusieurs heures voir jours entier afin d'être au mieux optimisées.
+	Alors que d'autres ont eu pour temps de réalisation que leur temps d'écriture.
+
+	Une fois qu'un bon nombre de requêtes ont été écrites, elles ont été intégrées dans des classes PHP.
+
+	Par la suite, les requêtes ont toutes été fait au cas par cas, selon le besoin pour les classes PHP.
+
+	Nous avons dû faire face à un problème assez étonnant auquel nous ne nous attendions pas.
+	En effet, une de nos tables s'intitule release, or, "release" est un mot spécial en SQL, nous avons donc eu des erreurs inattendues que nous n'imaginions pas
+	Evidement, nous avons simplement paré ce problème en ajoutant des apostrophes culbutées "`" .
+
+	Certaines requêtes ont été difficiles à réaliser, pour la simple raison que le projet est difficile.
+	Par exemple, pour calculer la note d'un album (ou artiste), il faut chercher les chansons de cet album, et calculer leur note. Cette note est donnée par tous les utilisateurs.
+	En "résumé", la note d'un album est la moyenne des notes des chansons de cet album, et la note des chansons est la moyenne des notes données par les utilisateurs.
+
+	Autre requête qui a demandé du temps, la requêtes permettant de calculer la similarité entre deux profils.
+	Cette similarité est calculé de cette manière:
+		Pour un utilisateur donné, on affiche les utilisateurs ayant noté (au dessus de 5/10) le plus de chansons en commun (et on affiche ce nombre) avec l'utilisateur donné
+
+	Autre requête (promis c'est la dernière, on peut pas tout mettre quand même...), la requête de last activities
+		Cette requête a pour but d'afficher les dernières activités faites sur le site
+		(une activité est lorsqu'un utilisateur connait, commente ou note une chanson)
+		La requête en elle-même n'est pas complexe mais il nous a fallu du temps pour trouver une solution simple: une sous requête constituée de trois requêtes reliées ensemble par des union all.

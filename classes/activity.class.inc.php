@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine De Gieter
 	 *
 	 * Abstract Class Activity : describes an Activity (Comment, Rate, Know)

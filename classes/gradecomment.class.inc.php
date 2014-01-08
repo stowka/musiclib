@@ -1,6 +1,6 @@
 <?php
 
-	/*
+	/**
 	 * @author Jérôme Boesch
 	 *
 	 * Class GradeComment: modelises the relation between a user and a comment

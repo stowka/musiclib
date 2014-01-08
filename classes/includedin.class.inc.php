@@ -1,5 +1,5 @@
 <?php
-	/*
+	/**
 	 * @author Antoine Mady
 	 *
 	 * Class Include: modelises the relation between a song
