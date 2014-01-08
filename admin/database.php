@@ -3,6 +3,16 @@ header("Content-Type: text/plain");
 require_once("../config/config.inc");
 
 
+function convertToUTF8($str) {
+    $enc = mb_detect_encoding($str);
+
+    if ($enc && $enc !== 'UTF-8') {
+        return iconv($enc, 'UTF-8', $str);
+    } else {
+        return $str;
+    }
+}
+
 
 //partie affichage
 
@@ -24,6 +34,7 @@ if(isset($_GET['choice']) && $_GET['choice']=='1')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -46,6 +57,7 @@ if(isset($_GET['choice']) && $_GET['choice']=='2')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -69,6 +81,7 @@ if(isset($_GET['action']) && $_GET['action']=='artist')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -95,6 +108,7 @@ if(isset($_GET['action']) && $_GET['action']=='album')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -116,6 +130,7 @@ if(isset($_GET['action']) && $_GET['action']=='song')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -133,6 +148,7 @@ if(isset($_GET['action']) && $_GET['action']=='albumtype')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -151,6 +167,7 @@ if(isset($_GET['action']) && $_GET['action']=='genre')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -167,6 +184,7 @@ if(isset($_GET['action']) && $_GET['action']=='user')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -190,6 +208,7 @@ if(isset($_GET['action']) && $_GET['action']=='known')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -212,6 +231,7 @@ if(isset($_GET['action']) && $_GET['action']=='rate')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -234,6 +254,7 @@ if(isset($_GET['action']) && $_GET['action']=='comment')
 	}
 
 	$stmt->closeCursor();
+	$data=convertToUTF8($data);
 	echo $data;
 }
 
@@ -244,7 +265,6 @@ if(isset($_GET['action']) && $_GET['action']=='comment')
 if(isset($_GET['action']) && $_GET['action']==1)
 {
 	$notarizealbum = new Notarizealbum($_GET['user'],$_GET['id']);
-	echo 'ohey';
 	$notarizealbum->delete($_GET['user'],$_GET['id']);
 }
 

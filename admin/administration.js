@@ -137,23 +137,23 @@ function database_show(el) {
 			
 			case 1.1 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				artistDB();
 				break;
 			case 1.2 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				albumDB();
 				break;
 			case 1.3 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				songDB();
 				break;
 			case 1.4 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				albumTypeDB();
 				break;
 			case 1.5 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				genreDB();
 				break;
 				
 		
@@ -164,23 +164,23 @@ function database_show(el) {
 			
 			case 2.1 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				userDB();
 				break;
 			case 2.2 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				knownsongDB();
 				break;
 			case 2.3 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				ratesDB();
 				break;
 			case 2.4 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				commentsDB();
 				break;
 			case 2.5 :
 				document.getElementById("workspace").style.marginLeft="200px";
-				document.getElementById("workspace").innerHTML = "";
+				lastConnection(50);
 				break;
 				
 				
@@ -264,14 +264,14 @@ function notarizeAlbumDB() {
 			{
 				infos=al[i].split(",");
 				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]+'</td><td>'+infos[4]
-					 +'</td><td><a href="../album.php?id='+infos[5]+'" alt="Album page">+</a></td><td><button id="delete'+infos[5]+infos[6]+'" onclick="deletenot(1,'+infos[6]+','+infos[5]+')">Moderate</button></td></tr>';//lien à modifier
+					 +'</td><td><a href="../album.php?id='+infos[5]+'" alt="Album page">+</a></td><td><button id="delete'+infos[5]+infos[6]+'" onclick="deletebynumerous(\'1\','+infos[6]+','+infos[5]+')">Delete</button></td></tr>';//lien à modifier
 
 			}
 			html += "</tbody></table";
 			document.getElementById("workspace").innerHTML=html;
 	    }
 	}
-	xhr.open("GET","database.php?choice=1",true);  
+	xhr.open("GET","./database.php?choice=1",true);  
 	xhr.send();
 }
 
@@ -318,42 +318,45 @@ function notarizeArtistDB() {
 			{
 				infos=al[i].split(",");
 				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]+'</td><td><a href="../artist.php?id='+infos[4]
-				      +'" alt="Artist page">+</a></td><td><button id="delete'+infos[4]+infos[5]+'" onclick="deletenot(2,'+infos[5]+','+infos[4]+')">Moderate</button></td></tr>';//lien à modifier
+				      +'" alt="Artist page">+</a></td><td><button id="delete'+infos[4]+infos[5]+'" onclick="deletebynumerous(\'2\','+infos[5]+','+infos[4]+')">Delete</button></td></tr>';
 
 			}
 			html += "</tbody></table";
 			document.getElementById("workspace").innerHTML=html;
 	    }
 	}
-	xhr.open("GET","database.php?choice=2",true);  
+	xhr.open("GET","./database.php?choice=2",true);  
 	xhr.send();
 }
 
 
 
-function deletenot(sub,user,id)
+function deletebynumerous(type,user,id)
 {
 	console.log("begin deletenot");
-	console.log(sub+","+user+","+id);
+	console.log(type+","+user+","+id);
 	var xhr = new XMLHttpRequest();	 
 	 
 	xhr.onreadystatechange=function()
 	{
 	    if (xhr.readyState==4 && xhr.status==200)
 	    {
-	    	console.log('deletenot query ok');
-	    	alert(xhr.responseText);
-	    	if(sub==1)
+	    	if(type=='1')
 	    	{
 	    		database_show(3.2);
 	    	}
-	    	else if(sub==2)
+	    	else if(type=='2')
 	    	{
 	    		database_show(3.1);
 	    	}
+	    	else if(type=='3')
+	    	{
+	    		database_show(2.4);
+	    	}
 	    }
 	}
-	xhr.open("GET",'database.php?not='+sub+'&user='+user+'&id='+id,true);  //bug complet, dans l'appel notarizealbumDB ça marche pas, tout semble correct pourtant, alors que pour artiste c'est qu'à moitié*..
+	xhr.open("GET",'database.php?action='+type+'&user='+user+'&id='+id,true); 
+	 //bug complet, dans l'appel notarizealbumDB ça marche pas, tout semble correct pourtant, alors que pour artiste c'est niquel..
 	xhr.send();	
 }
 
@@ -438,7 +441,7 @@ function lastUser()
 				else
 				{
 					html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]
-						 +'</td><td>No <button id=active'+infos[0]+' onclick=\'activateUser('+infos[0]+')\'>Activate</button></td><td> + </td></tr>';
+						 +'</td><td>No <button id=active'+infos[0]+' onclick=\'activateUser('+infos[0]+')\'>Activate</button></td><td><a href="../user.php?id='+infos[0]+'" alt="User page">+</a></td></tr>';
 				}
 			}
 			html += "</tbody></table";
@@ -493,3 +496,286 @@ function lastConnection()
 	xhr.open("GET","lastaction.php?choice=1.6",true);  
 	xhr.send();
 }
+
+
+function artistDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>ID</th><th>Name</th><th>Upload Date</th><th>Upload User</th><th>More</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]+'</td><td><a href="../artist.php?id='+infos[0]
+				     +'" alt="Artist page">+</a></td><td><button id="delete" onclick="deletebyid(\'artist\','+infos[0]+')">Delete</button></td></tr>';//lien a modifier
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=artist",true);  
+	xhr.send();	
+}
+
+
+function albumDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>ID</th><th>Name</th><th>Artist</th><th>ReleaseDate</th><th>Upload Date</th><th>Upload User</th><th>Type</th><th>More</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]+'</td><td>'+infos[4]
+				     +'</td><td>'+infos[5]+'</td><td>'+infos[6]+'</td><td><a href="../album.php?id='+infos[0]
+				     +'" alt="Album page">+</a></td><td><button id="delete" onclick="deletebyid(\'album\','+infos[0]+')">Delete</button></td></tr>';//lien a modifier
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=album",true);  
+	xhr.send();
+}
+
+function songDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>ID</th><th>Title</th><th>Duration</th><th>Artist</th><th>Album</th><th>More</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]
+				     +'</td><td>'+infos[4]+'</td><td><a href="../song.php?id='+infos[0]
+				     +'" alt="Song page">+</a></td><td><button id="delete" onclick="deletebyid(\'song\','+infos[0]+')">Delete</button></td></tr>';//lien a modifier
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=song",true);  
+	xhr.send();
+}
+
+
+
+function albumTypeDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>ID</th><th>Label</th><th>Description</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td></tr>';//lien a modifier
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=albumtype",true);  
+	xhr.send();
+}
+
+function genreDB() {
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>ID</th><th>Label</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td></tr>';//lien a modifier
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=genre",true);  
+	xhr.send();
+}
+
+function userDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>ID</th><th>UserName</th><th>Mail</th><th>Public Mail</th><th>Active</th><th>More</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+
+				if(infos[4]==1)
+				{
+					html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]
+					     +'</td><td>Yes</td><td><a href="../user.php?id='+infos[0]+'" alt="User page">+</a></td></tr>';//lien a modifier
+				}
+				else
+				{
+					html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]
+						 +'</td><td>No <button id=active'+infos[0]+' onclick=\'activateUser('+infos[0]+')\'>Activate</button></td><td><a href="../user.php?id='+infos[0]
+						 +'" alt="User page">+</a></td><td><button id="delete" onclick="deleteuser('+infos[0]+')">Delete</button></td></tr>';
+				}
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=user",true);  
+	xhr.send();
+}
+
+
+function knownsongDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>Song</th><th>User</th><th>Owned</th><th>Date</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]+'</td></tr>';//lien a modifier
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=known",true);  
+	xhr.send();
+}
+
+
+function ratesDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>Song</th><th>User</th><th>Grade</th><th>Date</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]+'</td></tr>';//lien a modifier
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=rate",true);  
+	xhr.send();
+}
+
+
+function commentsDB()
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	data=xhr.responseText;
+	    	al = data.split(';');
+	    	var infos="";
+	    	var html="<table><thead><th>Song</th><th>User</th><th>Text</th><th>Date</th></thead>";
+	    	for(var i=0;i<al.length-1;i++)
+			{
+				infos=al[i].split(",");
+				html += '<tr><td>'+infos[0]+'</td><td>'+infos[1]+' </td><td>'+infos[2]+'</td><td>'+infos[3]+'</td><td><button id="delete'+infos[4]+infos[5]+'" onclick="deletebynumerous(\'3\','+infos[4]+','+infos[5]+')">Delete</button></td></tr>';
+
+			}
+			html += "</tbody></table";
+			document.getElementById("workspace").innerHTML=html;
+	    }
+	}
+	xhr.open("GET","database.php?action=comment",true);  
+	xhr.send();
+}
+
+
+function deletebyid(type,id)
+{
+	var xhr = new XMLHttpRequest();	 
+	 
+	xhr.onreadystatechange=function()
+	{
+	    if (xhr.readyState==4 && xhr.status==200)
+	    {
+	    	if(type=='artist')
+	    	{
+	    		database_show(1.1);
+	    	}
+	    	else if(type=='album')
+	    	{
+	    		database_show(1.2);
+	    	}
+	    	else if(type=='song')
+	    	{
+	    		database_show(1.3);
+	    	}
+	    }
+	}
+	xhr.open("GET",'database.php?type='+type+'&id='+id,true); 
+	xhr.send();
+}
+
