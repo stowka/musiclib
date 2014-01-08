@@ -1,5 +1,5 @@
 <?php
-	$db = new PDO("mysql:host=localhost;dbname=musiclib","root","abmargot");
+	$db = new PDO("mysql:host=localhost;dbname=musiclib","root","893QQY");
 	$stmt = $db->query("SELECT(SELECT COUNT(ar.id) FROM artist ar) as nbartist,(SELECT COUNT(al.id) FROM album al) as nbalbum,
 	(SELECT count(s.id) FROM song s) as nbsong,
 	(SELECT count(u.id) FROM user u) as nbuser,

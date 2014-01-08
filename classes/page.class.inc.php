@@ -1,7 +1,7 @@
 <?php
 	/**
 	 *
-	 *
+	 * @author Antoine De Gieter
 	 *
 	 *
 	 */
@@ -11,7 +11,7 @@
 		}
 
 		public static function go404() {
-			header( "Location: 404" );
+			header( "Location: 404.php" );
 		}
 
 		public static function goArtist( $id ) {
