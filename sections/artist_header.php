@@ -20,7 +20,9 @@
                 ?>      
                 </small>
         </h2>
-        <?php if ( isset( $_SESSION['online'] ) ) : ?>
+        <?php
+			if ( isset( $_SESSION['online'] ) && $_SESSION['online'] ):
+		?>
 	        <div class="btn-group btn-group-lg pull-right">
 	                <form method="post" action="<?php print $artist->getUrl(); ?>" id="notarizeAgree" style="display:inline;">
 	                	<input type="hidden" name="artist">
@@ -41,13 +43,17 @@
 	                	<ul class="dropdown-menu" role="menu">
 	                        <?php
 	                        	foreach ( Cause::all() as $cause ):
+	                        		if ( (int)$cause->getId() !== 7 ):
 	                        ?>
 	                    		<li><a href="#" onclick="javascript:$('#cause').val('<?php print $cause->getId(); ?>'); $('#notarizeDisagree').submit();"><?php print $cause; ?></a></li>
 	                        <?php
+	                        		endif;
 	                        	endforeach;
 	                        ?>
 	                	</ul>
 	                </form>
 	        </div>
-	    <?php endif; ?>
+	    <?php 
+	    	endif; 
+	    ?>
 </div>

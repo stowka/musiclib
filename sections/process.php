@@ -385,7 +385,7 @@
 		$user = $_SESSION['user']->getId();
 		$artist = $_GET['id'];
 		$cause = $_POST['cause'];
-		$cause = $agreement == 1 ? 0 : $cause;
+		$cause = $agreement == 1 ? 7 : $cause;
 		NotarizeArtist::create( $user, $artist, $agreement, $cause );
 	endif;
 
@@ -403,6 +403,6 @@
 		$user = $_SESSION['user']->getId();
 		$album = $_GET['id'];
 		$cause = $_POST['cause'];
-		$cause = $agreement == 1 ? 0 : $cause;
+		$cause = $agreement == 1 ? 7 : $cause;
 		NotarizeAlbum::create( $user, $album, $agreement, $cause );
 	endif;

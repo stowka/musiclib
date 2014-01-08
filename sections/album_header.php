@@ -37,32 +37,40 @@
 		</small>
 
 	</h2>
-	<div class="btn-group btn-group-lg pull-right">
-		 <form method="post" action="<?php print $album->getUrl(); ?>" id="notarizeAgree" style="display:inline;">
-        	<input type="hidden" name="album">
-        	<input type="hidden" name="agree">
-        	<input type="hidden" name="cause">
-        	<button class="btn btn-success" type="submit" title="Right informations" <?php print $album->isAgreedBy( $_SESSION['user']->getId() ) ? 'disabled' : ''; ?>>
-                 <span class="glyphicon glyphicon-ok"> <?php print NotarizeAlbum::countAgreeByAlbum( $album->getId() ); ?></span>
-        	</button>
-        </form>
-        <form method="post" action="<?php print $album->getUrl(); ?>" id="notarizeDisagree" style="display:inline;">
-        	<input type="hidden" name="album">
-        	<input type="hidden" name="disagree">
-        	<input type="hidden" id="cause" name="cause" value="0">
-        	<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button" title="Wrong informations" <?php print $album->isDisagreedBy( $_SESSION['user']->getId() ) ? 'disabled' : ''; ?>>
-                 <span class="glyphicon glyphicon-ban-circle"> <?php print NotarizeAlbum::countDisagreeByAlbum( $album->getId() ); ?></span>
-        	         <span class="caret"></span>
-        	</button>
-        	<ul class="dropdown-menu" role="menu">
-                <?php
-                	foreach ( Cause::all() as $cause ):
-                ?>
-            		<li><a href="#" onclick="javascript:$('#cause').val('<?php print $cause->getId(); ?>'); $('#notarizeDisagree').submit();"><?php print $cause; ?></a></li>
-                <?php
-                	endforeach;
-                ?>
-        	</ul>
-        </form>
-	</div>
+	<?php
+		if ( isset( $_SESSION['online'] ) && $_SESSION['online'] ):
+	?>
+		<div class="btn-group btn-group-lg pull-right">
+			 <form method="post" action="<?php print $album->getUrl(); ?>" id="notarizeAgree" style="display:inline;">
+	        	<input type="hidden" name="album">
+	        	<input type="hidden" name="agree">
+	        	<input type="hidden" name="cause">
+	        	<button class="btn btn-success" type="submit" title="Right informations" <?php print $album->isAgreedBy( $_SESSION['user']->getId() ) ? 'disabled' : ''; ?>>
+	                 <span class="glyphicon glyphicon-ok"> <?php print NotarizeAlbum::countAgreeByAlbum( $album->getId() ); ?></span>
+	        	</button>
+	        </form>
+	        <form method="post" action="<?php print $album->getUrl(); ?>" id="notarizeDisagree" style="display:inline;">
+	        	<input type="hidden" name="album">
+	        	<input type="hidden" name="disagree">
+	        	<input type="hidden" id="cause" name="cause" value="0">
+	        	<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button" title="Wrong informations" <?php print $album->isDisagreedBy( $_SESSION['user']->getId() ) ? 'disabled' : ''; ?>>
+	                 <span class="glyphicon glyphicon-ban-circle"> <?php print NotarizeAlbum::countDisagreeByAlbum( $album->getId() ); ?></span>
+	        	         <span class="caret"></span>
+	        	</button>
+	        	<ul class="dropdown-menu" role="menu">
+	                <?php
+	                	foreach ( Cause::all() as $cause ):
+	                		if ( (int)$cause->getId() !== 7 ):
+	                ?>
+	            		<li><a href="#" onclick="javascript:$('#cause').val('<?php print $cause->getId(); ?>'); $('#notarizeDisagree').submit();"><?php print $cause; ?></a></li>
+	                <?php
+	                		endif;
+	                	endforeach;
+	                ?>
+	        	</ul>
+	        </form>
+		</div>
+	<?php
+		endif;
+	?>
 </div>
