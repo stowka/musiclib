@@ -26,6 +26,9 @@
 	</p>
 
 	<p class="padded">
+		<a class="btn btn-success btn-block" data-toggle="modal" data-target="#known-songs" href="#known-songs">Known songs</a>
+	</p>
+	<p class="padded">
 		<a class="btn btn-info btn-block" href="add">New artist / album</a>
 	</p>
 	<hr>
@@ -35,6 +38,45 @@
 	</p>
 </div>
 <div class="padded"></div>
+
+<!-- Known songs -->
+<div class="modal fade" id="known-songs" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">
+					Known songs
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="peter-river">
+					<p class="padded">
+						<?php
+							foreach( $user->getKnownSongs() as $song ):
+								if( $song->isOwnedBy( $user->getId() ) ):
+						?>
+									<span class="glyphicon glyphicon-floppy-saved"></span> 
+						<?php
+								else:
+						?>
+									<span class="glyphicon glyphicon-floppy-remove"></span> 
+						<?php
+								endif;
+						?>
+								<a href="<?php print $song->getUrl(); ?>"><?php print $song; ?></a><br>
+						<?php
+							endforeach;
+						?>
+					</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <!-- Message admin -->
 <div class="modal fade" id="message-admin" tabindex="-1" role="dialog" aria-hidden="true">

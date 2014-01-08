@@ -194,6 +194,17 @@
 			return $count[0];
 		}
 
+		public function isOwnedBy( $user ) {
+			$stmt = $this->db->prepare( "select count(*) from know where user = ? and song = ? and owned = 1;" );
+			$stmt->execute( array(
+				$user,
+				$this->id
+			) );
+			$count = $stmt->fetch(PDO::FETCH_NUM);
+			$stmt->closeCursor();
+			return $count[0];
+		}
+
 		public function gradeBy( $user ) {
 			$stmt = $this->db->prepare( "select grade from rate where user = ? and song = ?;" );
 			$stmt->execute( array(
