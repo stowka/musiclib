@@ -407,3 +407,60 @@
 		$cause = $agreement == 1 ? 7 : $cause;
 		NotarizeAlbum::create( $user, $album, $agreement, $cause );
 	endif;
+	
+	/** Edit profil process
+		 *
+		 * @uthor by Valentin BRICE & Jérôme BOESCH
+		 *
+		 *
+		 **/
+		
+		 $allowed_extensions = array("jpeg", "jpg", "png");
+		
+		 if(isset($_SESSION['online']) && 
+		    $_SESSION['online']&&
+		    isset($_POST['picture'])&&
+		    !empty($_POST['picture'])&&
+		    isset($_POST['username'])&&
+		    !empty($_POST['username'])&&
+		    isset($_POST['email'])&&
+		    !empty($_POST['email']&&
+		    isset($_POST['new'])&&
+		    !empty($_POST['new'])&&
+		    isset($_POST['new2'])&&
+		    !empty($_POST['new2'])&&
+		    isset($_POST['old'])&&
+		    !empty($_POST['old'])&&
+		    isset($_POST['option'])):
+		    
+		    $_SESSION['user']->setUsername($_POST['username']);
+		    $_SESSION['user']->setEmail($_POST['email']);
+		    
+		    $pass = $_SESSION['user']->getPassword();
+		    
+		    if($pass = $_POST['old'] && $new == $new2):
+		      $_SESSION['user']->setPassword($_POST['new']); 
+		    endif;
+		    
+		    $_SESSION['user']->setPublicEmail($_POST['option']);
+		
+		    $picture = htmlspecialchars( $_POST['picture'] );
+		    $picture_name = explode( ".", $_FILES["picture"]["name"] );
+		    $extension = end( $picture_name );
+		
+		  if ( is_uploaded_file( $_FILES["picture"]["tmp_name"] ) 
+		  && isset( $_FILES["picture"] ) 
+		  && $_FILES["picture"]['error'] === 0 
+		  && in_array( $extension, $allowed_extensions ) ):
+		   $picture_name = strtolower($_SESSION['user']->getUsername()).'.'.$extension;
+		   $tmp_name = $_FILES["picture"]["tmp_name"];
+		   $path = "./img/user/".$picture_name;
+		   if ($_SESSION['user']->getPicture() !== ""):
+		    $name = $_SESSION['user']->getPicture();
+		    $way = "./img/user/".$name;
+		    unlink($way);
+		   endif;
+		   move_uploaded_file( $tmp_name, $path );
+		   $_SESSION['user']->setPicture( $picture_name );
+		  endif;
+    		 endif;
